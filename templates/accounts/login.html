@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Log in — StepUp{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="card p-4">
+                <h3 class="mb-1">Welcome back</h3>
+                <p class="text-muted mb-4">Log in to continue learning.</p>
+                <form method="post" novalidate>
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <button type="submit" class="btn btn-primary w-100 mt-3">Log in</button>
+                </form>
+                <p class="text-center mt-3 mb-0 small">
+                    New to StepUp? <a href="{% url 'accounts:signup' %}">Create an account</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
