@@ -53,9 +53,11 @@
                         <span class="credit-badge">💎 {{ user.wallet.balance }} credits</span>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'core:dashboard' %}">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'skills:browse' %}">Skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'accounts:profile' %}">Profile</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'accounts:logout' %}">Logout</a></li>
                 {% else %}
+                    <li class="nav-item"><a class="nav-link" href="{% url 'skills:browse' %}">Skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'accounts:login' %}">Login</a></li>
                     <li class="nav-item ms-lg-2">
                         <a class="btn btn-primary btn-sm px-3" href="{% url 'accounts:signup' %}">Sign up free</a>
