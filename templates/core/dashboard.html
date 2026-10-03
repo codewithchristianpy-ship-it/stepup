@@ -3,68 +3,102 @@
 
 {% block content %}
 <div class="container py-4">
-    <h2 class="mb-4">👋 Welcome back, {{ user.username }}</h2>
 
-    <div class="row g-4 mb-4">
-        <div class="col-md-4">
-            <div class="card p-4">
-                <p class="text-muted mb-1 small">💎 Credit balance</p>
-                <h1 class="mb-0">{{ wallet.balance }}</h1>
-                <p class="text-muted small mb-0 mt-2">Time credits available</p>
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="mb-0">👋 Welcome back, {{ user.username }}</h2>
+    <a href="{% url 'skills:browse' %}" class="btn btn-primary">
+      Browse skills →
+    </a>
+  </div>
+
+  <div class="row g-4 mb-4">
+    <div class="col-md-4">
+      <div class="card p-4">
+        <p class="text-muted mb-1 small">💎 Credit balance</p>
+        <h1 class="mb-0">{{ wallet.balance }}</h1>
+        <p class="text-muted small mb-0 mt-2">Time credits available</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card p-4">
+        <p class="text-muted mb-1 small">🎓 Total earned</p>
+        <h1 class="mb-0">{{ wallet.total_earned }}</h1>
+        <p class="text-muted small mb-0 mt-2">From teaching others</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card p-4">
+        <p class="text-muted mb-1 small">📚 Total spent</p>
+        <h1 class="mb-0">{{ wallet.total_spent }}</h1>
+        <p class="text-muted small mb-0 mt-2">On learning sessions</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-md-8">
+      <div class="card p-4">
+        <h5 class="mb-3">🚀 Quick actions</h5>
+
+        <div class="row g-3">
+          <div class="col-md-6">
+            <a href="{% url 'skills:browse' %}" class="card p-3 text-decoration-none h-100 d-block" style="border:1px solid #e5e7eb;">
+              <div style="font-size:2rem;">🌳</div>
+              <strong class="d-block mt-2">Browse skills</strong>
+              <small class="text-muted">18 skills ready to learn — free</small>
+            </a>
+          </div>
+
+          <div class="col-md-6">
+            <a href="{% url 'skills:my_lessons' %}" class="card p-3 text-decoration-none h-100 d-block" style="border:1px solid #e5e7eb;">
+              <div style="font-size:2rem;">📚</div>
+              <strong class="d-block mt-2">My lessons</strong>
+              <small class="text-muted">See your contributions + status</small>
+            </a>
+          </div>
+
+          <div class="col-md-6">
+            <a href="{% url 'accounts:profile' %}" class="card p-3 text-decoration-none h-100 d-block" style="border:1px solid #e5e7eb;">
+              <div style="font-size:2rem;">👤</div>
+              <strong class="d-block mt-2">Edit profile</strong>
+              <small class="text-muted">Update your bio, country, role</small>
+            </a>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card p-3 h-100" style="border:1px dashed #d1d5db; background:#f9fafb;">
+              <div style="font-size:2rem;">📹</div>
+              <strong class="d-block mt-2">Live sessions</strong>
+              <small class="text-muted">Booking coming next 🚧</small>
             </div>
+          </div>
         </div>
-        <div class="col-md-4">
-            <div class="card p-4">
-                <p class="text-muted mb-1 small">🎓 Total earned</p>
-                <h1 class="mb-0">{{ wallet.total_earned }}</h1>
-                <p class="text-muted small mb-0 mt-2">From teaching others</p>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card p-4">
-                <p class="text-muted mb-1 small">📚 Total spent</p>
-                <h1 class="mb-0">{{ wallet.total_spent }}</h1>
-                <p class="text-muted small mb-0 mt-2">On learning sessions</p>
-            </div>
-        </div>
+      </div>
     </div>
 
-    <div class="row g-4">
-        <div class="col-md-8">
-            <div class="card p-4">
-                <h5>🚀 Getting started</h5>
-                <p class="text-muted">Skill chains and live sessions are coming next. Right now you have your foundation.</p>
-                <ul class="mb-0">
-                    <li>✅ Account created</li>
-                    <li>✅ 3 free credits in your wallet</li>
-                    <li>⏳ Browse skills <em>(coming next)</em></li>
-                    <li>⏳ Book your first session <em>(coming next)</em></li>
-                    <li>⏳ Become a Link and teach <em>(coming next)</em></li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card p-4">
-                <h5>📜 Recent transactions</h5>
-                {% if recent_tx %}
-                    <ul class="list-unstyled mb-0">
-                        {% for tx in recent_tx %}
-                            <li class="mb-2 pb-2 border-bottom">
-                                <div class="d-flex justify-content-between">
-                                    <span class="small">{{ tx.description|truncatechars:40 }}</span>
-                                    <strong class="small {% if tx.amount > 0 %}text-success{% else %}text-danger{% endif %}">
-                                        {% if tx.amount > 0 %}+{% endif %}{{ tx.amount }}
-                                    </strong>
-                                </div>
-                                <small class="text-muted">{{ tx.created_at|date:"M d, Y" }}</small>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                {% else %}
-                    <p class="text-muted small mb-0">No transactions yet.</p>
-                {% endif %}
-            </div>
-        </div>
+    <div class="col-md-4">
+      <div class="card p-4">
+        <h5>📜 Recent transactions</h5>
+        {% if recent_tx %}
+          <ul class="list-unstyled mb-0">
+            {% for tx in recent_tx %}
+              <li class="mb-2 pb-2 border-bottom">
+                <div class="d-flex justify-content-between">
+                  <span class="small">{{ tx.description|truncatechars:40 }}</span>
+                  <strong class="small {% if tx.amount > 0 %}text-success{% else %}text-danger{% endif %}">
+                    {% if tx.amount > 0 %}+{% endif %}{{ tx.amount }}
+                  </strong>
+                </div>
+                <small class="text-muted">{{ tx.created_at|date:"M d, Y" }}</small>
+              </li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p class="text-muted small mb-0">No transactions yet.</p>
+        {% endif %}
+      </div>
     </div>
+  </div>
+
 </div>
 {% endblock %}

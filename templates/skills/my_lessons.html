@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% block title %}My Lessons — StepUp{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+
+  <h1 class="mb-4">📚 My Lessons</h1>
+
+  <div class="row g-3 mb-4">
+    <div class="col-md-4">
+      <div class="card p-3">
+        <small class="text-muted">✅ Published</small>
+        <h3 class="mb-0">{{ published_count }}</h3>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card p-3">
+        <small class="text-muted">⏳ Pending review</small>
+        <h3 class="mb-0">{{ pending_count }}</h3>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card p-3">
+        <small class="text-muted">❌ Rejected</small>
+        <h3 class="mb-0">{{ rejected_count }}</h3>
+      </div>
+    </div>
+  </div>
+
+  {% if lessons %}
+    <div class="card">
+      <ul class="list-group list-group-flush">
+        {% for lesson in lessons %}
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div>
+              <strong>{{ lesson.skill.icon }} {{ lesson.skill.name }}</strong> —
+              {{ lesson.title }}
+              <br>
+              <small class="text-muted">
+                Submitted {{ lesson.created_at|timesince }} ago
+                {% if lesson.review_reason %}
+                  • {{ lesson.review_reason }}
+                {% endif %}
+              </small>
+            </div>
+            <div class="text-end">
+              {% if lesson.status == 'published' %}
+                <span class="badge bg-success">Published</span>
+                <br>
+                <a href="{% url 'skills:lesson' lesson.skill.slug lesson.order %}" class="small">View →</a>
+              {% elif lesson.status == 'pending' %}
+                <span class="badge bg-warning text-dark">Pending</span>
+              {% elif lesson.status == 'hidden' %}
+                <span class="badge bg-secondary">Hidden</span>
+              {% else %}
+                <span class="badge bg-danger">Rejected</span>
+              {% endif %}
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% else %}
+    <div class="text-center py-5">
+      <div style="font-size:4rem;">📝</div>
+      <h4>You haven't added any lessons yet</h4>
+      <p class="text-muted">Share what you learned to help someone one step behind you.</p>
+      <a href="{% url 'skills:browse' %}" class="btn btn-primary">Browse skills →</a>
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

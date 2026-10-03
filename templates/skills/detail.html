@@ -16,13 +16,16 @@
   <p class="lead">{{ skill.description }}</p>
 
   <div class="row g-4 mt-2">
+
+    <!-- LEFT: Official lessons -->
     <div class="col-lg-6">
       <div class="card p-4 h-100">
-        <h4>📖 Learn alone</h4>
-        <p class="text-muted small">Read simple lessons. Free, self-paced, no account needed.</p>
-        {% if lessons %}
+        <h4>📖 Official Lessons</h4>
+        <p class="text-muted small">Written by the StepUp team. Start here.</p>
+
+        {% if official_lessons %}
           <ol class="mt-3">
-            {% for lesson in lessons %}
+            {% for lesson in official_lessons %}
               <li class="mb-2">
                 <a href="{% url 'skills:lesson' skill.slug lesson.order %}" class="text-decoration-none">
                   <strong>{{ lesson.title }}</strong>
@@ -31,17 +34,21 @@
               </li>
             {% endfor %}
           </ol>
-          <a href="{% url 'skills:lesson' skill.slug 1 %}" class="btn btn-primary mt-2">Start reading →</a>
+          <a href="{% url 'skills:lesson' skill.slug official_lessons.0.order %}" class="btn btn-primary mt-2">
+            Start reading →
+          </a>
         {% else %}
-          <p class="text-muted mt-3">No lessons yet. Be the first to add one — or book a live session below.</p>
+          <p class="text-muted mt-3">No official lessons yet.</p>
         {% endif %}
       </div>
     </div>
 
+    <!-- RIGHT: Live teachers -->
     <div class="col-lg-6">
       <div class="card p-4 h-100">
         <h4>🤝 Learn together</h4>
         <p class="text-muted small">Learn live from someone one step ahead of you.</p>
+
         {% if fresh_links %}
           <ul class="list-unstyled mt-3">
             {% for link in fresh_links|slice:":5" %}
@@ -70,6 +77,62 @@
     </div>
   </div>
 
+  <!-- COMMUNITY LESSONS SECTION -->
+  <div class="card p-4 mt-4">
+    <div class="d-flex justify-content-between align-items-center">
+      <div>
+        <h4 class="mb-1">🌟 Community Lessons</h4>
+        <p class="text-muted small mb-0">Shared by learners one step ahead of you.</p>
+      </div>
+      {% if user.is_authenticated %}
+        {% if can_add_lesson %}
+          <a href="{% url 'skills:add_lesson' skill.slug %}" class="btn btn-primary btn-sm">
+            + Add your lesson
+          </a>
+        {% else %}
+          {% if official_lessons %}
+            <a href="{% url 'skills:lesson' skill.slug official_lessons.0.order %}" class="btn btn-outline-primary btn-sm">
+              Read 1 lesson to contribute
+            </a>
+          {% else %}
+            <span class="text-muted small">No lessons available yet</span>
+          {% endif %}
+        {% endif %}
+      {% else %}
+        <a href="{% url 'accounts:login' %}" class="btn btn-outline-primary btn-sm">
+          Login to contribute
+        </a>
+      {% endif %}
+    </div>
+
+    {% if community_lessons %}
+      <ul class="list-unstyled mt-3 mb-0">
+        {% for lesson in community_lessons %}
+          <li class="mb-3 pb-3 border-bottom">
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <a href="{% url 'skills:lesson' skill.slug lesson.order %}" class="text-decoration-none">
+                  <strong>{{ lesson.title }}</strong>
+                </a>
+                <br>
+                <small class="text-muted">
+                  by {{ lesson.author.username|default:"Anonymous" }}
+                  • {{ lesson.estimated_minutes }} min
+                  {% if lesson.helpful_votes %}• 👍 {{ lesson.helpful_votes }}{% endif %}
+                </small>
+              </div>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="text-muted mt-3 mb-0">
+        No community lessons yet. Be the first to share what you learned!
+      </p>
+    {% endif %}
+  </div>
+
+  <!-- Struggle library -->
   {% if struggles %}
     <div class="card p-4 mt-4">
       <h5>📝 Struggle library</h5>
@@ -85,6 +148,7 @@
     </div>
   {% endif %}
 
+  <!-- Mark as learned -->
   <div class="card p-4 mt-4">
     {% if user_link %}
       <div class="text-center">
@@ -98,11 +162,11 @@
       </div>
     {% elif user.is_authenticated %}
       <h5>✅ I just learned this!</h5>
-      <p class="text-muted small">When you're ready, mark this skill as learned and become a teacher for the next person.</p>
+      <p class="text-muted small">Mark this skill as learned and become a teacher for the next person.</p>
       <form method="post" action="{% url 'skills:mark_learned' skill.slug %}">
         {% csrf_token %}
         <div class="mb-3">
-          <label class="form-label">What confused you most? (optional but helpful)</label>
+          <label class="form-label">What confused you most?</label>
           <textarea name="biggest_confusion" class="form-control" rows="2" placeholder="e.g., I mixed up = and == for days"></textarea>
         </div>
         <div class="mb-3">
@@ -118,7 +182,7 @@
     {% else %}
       <div class="text-center">
         <h5>Ready to learn {{ skill.name }}?</h5>
-        <p class="text-muted">Create a free account to track your progress and become a Link.</p>
+        <p class="text-muted">Create a free account to track progress and become a Link.</p>
         <a href="{% url 'accounts:signup' %}" class="btn btn-primary">Sign up free</a>
       </div>
     {% endif %}

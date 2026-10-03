@@ -4,7 +4,9 @@
 {% block content %}
 <div class="container py-4" style="max-width: 800px;">
 
-  <a href="{% url 'skills:detail' skill.slug %}" class="text-decoration-none small text-muted">← Back to {{ skill.name }}</a>
+  <a href="{% url 'skills:detail' skill.slug %}" class="text-decoration-none small text-muted">
+    ← Back to {{ skill.name }}
+  </a>
 
   <div class="mt-3 mb-4">
     <p class="text-muted small mb-1">Lesson {{ lesson.order }} of {{ total_lessons }}</p>
@@ -13,10 +15,37 @@
     </div>
   </div>
 
-  <h1 class="mb-4">{{ lesson.title }}</h1>
+  <h1 class="mb-3">{{ lesson.title }}</h1>
 
-  <div class="card p-4 mb-4" style="white-space: pre-wrap; font-size: 1.05rem; line-height: 1.7;">
+  {% if lesson.is_community %}
+    <div class="alert alert-info py-2 small mb-3">
+      🌟 <strong>Community lesson</strong> — shared by
+      <strong>{{ lesson.author.username|default:"a learner" }}</strong>
+    </div>
+  {% endif %}
+
+  <div class="card p-4 mb-3" style="white-space: pre-wrap; font-size: 1.05rem; line-height: 1.7;">
 {{ lesson.content }}
+  </div>
+
+  <!-- Helpful + Report buttons -->
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <small class="text-muted">
+      {% if lesson.helpful_votes %}👍 {{ lesson.helpful_votes }} found this helpful{% endif %}
+    </small>
+    <div class="d-flex gap-2">
+      {% if user.is_authenticated %}
+        <form method="post" action="{% url 'skills:vote_helpful' skill.slug lesson.order %}" class="d-inline">
+          {% csrf_token %}
+          <button class="btn btn-outline-success btn-sm">👍 This helped me</button>
+        </form>
+        {% if lesson.is_community and lesson.author != user %}
+          <a href="{% url 'skills:report_lesson' skill.slug lesson.order %}" class="btn btn-outline-danger btn-sm">
+            🚩 Report
+          </a>
+        {% endif %}
+      {% endif %}
+    </div>
   </div>
 
   {% if struggles %}

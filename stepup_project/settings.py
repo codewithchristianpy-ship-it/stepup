@@ -8,6 +8,9 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='127.0.0.1,localhost').split(',')
+# Render health check needs this
+if '.onrender.com' not in ALLOWED_HOSTS:
+    ALLOWED_HOSTS.append('.onrender.com')
 
 # --- Applications ---
 INSTALLED_APPS = [
@@ -111,8 +114,15 @@ CRISPY_TEMPLATE_PACK = 'bootstrap5'
 # --- Production security (only active when DEBUG=False) ---
 if not DEBUG:
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-    SECURE_SSL_REDIRECT = True
+    SECURE_SSL_REDIRECT = False  # Render handles SSL; set True only if issues
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
-    SECURE_HSTS_SECONDS = 31536000
-    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_HSTS_SECONDS = 0  # Start at 0; raise later after verifying HTTPS
+
+    # CSRF trusted origins for Render
+    CSRF_TRUSTED_ORIGINS = [
+        'https://*.onrender.com',
+    ]
+
+    # Static files with WhiteNoise
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
