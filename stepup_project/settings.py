@@ -68,7 +68,13 @@ WSGI_APPLICATION = 'stepup_project.wsgi.application'
 # Local: SQLite. Production: use DATABASE_URL from Neon.
 DATABASE_URL = config('DATABASE_URL', default='')
 if DATABASE_URL:
-    DATABASES = {'default': dj_database_url.parse(DATABASE_URL, conn_max_age=600)}
+    DATABASES = {
+        'default': dj_database_url.parse(
+            DATABASE_URL,
+            conn_max_age=600,
+            ssl_require=True,   # forces SSL without needing ?sslmode in URL
+        )
+    }
 else:
     DATABASES = {
         'default': {
@@ -76,7 +82,6 @@ else:
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
-
 # --- Custom user model ---
 AUTH_USER_MODEL = 'accounts.User'
 
