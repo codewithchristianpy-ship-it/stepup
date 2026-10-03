@@ -27,7 +27,6 @@ class LessonAdmin(admin.ModelAdmin):
     actions = ['approve_lessons', 'reject_lessons']
 
     def approve_lessons(self, request, queryset):
-        # Get author info BEFORE updating
         author_emails = []
         for lesson in queryset.filter(status='pending'):
             if lesson.author:
@@ -43,7 +42,6 @@ class LessonAdmin(admin.ModelAdmin):
                 author_emails.append(lesson.author.email)
 
         queryset.update(status='published', review_reason='Approved by admin.')
-
         self.message_user(
             request,
             f"{queryset.count()} lessons approved. Credits awarded to {len(set(author_emails))} authors."
