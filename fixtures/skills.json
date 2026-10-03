@@ -1,0 +1,3849 @@
+[
+{
+  "model": "skills.skill",
+  "pk": 1,
+  "fields": {
+    "name": "Python Basics",
+    "slug": "python-basics",
+    "category": "technology",
+    "difficulty": "beginner",
+    "description": "Learn the very basics of Python programming - variables, decisions, and loops.",
+    "icon": "🐍",
+    "created_at": "2026-09-30T16:10:46.125Z"
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 2,
+  "fields": {
+    "name": "English Conversation",
+    "slug": "english-conversation",
+    "category": "language",
+    "difficulty": "beginner",
+    "description": "Practice everyday English conversation - greetings, small talk, and confidence.",
+    "icon": "🗣️",
+    "created_at": "2026-09-30T16:10:46.191Z"
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 3,
+  "fields": {
+    "name": "Excel Basics",
+    "slug": "excel-basics",
+    "category": "technology",
+    "difficulty": "beginner",
+    "description": "Learn to use Excel for everyday tasks - lists, totals, and simple formulas.",
+    "icon": "📊",
+    "created_at": "2026-09-30T16:10:46.260Z"
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 4,
+  "fields": {
+    "name": "Using AI Tools",
+    "slug": "using-ai-tools",
+    "category": "technology",
+    "difficulty": "beginner",
+    "description": "Learn to use AI tools like ChatGPT for learning, work, and creativity.",
+    "icon": "🤖",
+    "created_at": "2026-09-30T16:47:26.292Z"
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 5,
+  "fields": {
+    "name": "Smartphone Basics",
+    "slug": "smartphone-basics",
+    "category": "technology",
+    "difficulty": "beginner",
+    "description": "Learn to use a smartphone confidently - calls, WhatsApp, photos, and safety.",
+    "icon": "📱",
+    "created_at": "2026-09-30T16:47:26.530Z"
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 6,
+  "fields": {
+    "name": "French Basics",
+    "slug": "french-basics",
+    "category": "language",
+    "difficulty": "beginner",
+    "description": "Learn basic French - greetings, numbers, and everyday phrases.",
+    "icon": "🇫🇷",
+    "created_at": "2026-09-30T16:49:32.692Z"
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 7,
+  "fields": {
+    "name": "Spanish Basics",
+    "slug": "spanish-basics",
+    "category": "language",
+    "difficulty": "beginner",
+    "description": "Learn basic Spanish - greetings, numbers, and useful phrases.",
+    "icon": "🇪🇸",
+    "created_at": "2026-09-30T16:49:33.030Z"
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 8,
+  "fields": {
+    "name": "Fractions & Decimals",
+    "slug": "fractions-decimals",
+    "category": "math",
+    "difficulty": "beginner",
+    "description": "Master fractions and decimals - the foundation of all math.",
+    "icon": "➗",
+    "created_at": "2026-09-30T16:49:33.241Z"
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 9,
+  "fields": {
+    "name": "Algebra Basics",
+    "slug": "algebra-basics",
+    "category": "math",
+    "difficulty": "beginner",
+    "description": "Understand algebra from scratch - equations, variables, and word problems.",
+    "icon": "🧮",
+    "created_at": "2026-09-30T16:49:33.636Z"
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 10,
+  "fields": {
+    "name": "CV Writing",
+    "slug": "cv-writing",
+    "category": "career",
+    "difficulty": "beginner",
+    "description": "Write a CV that gets interviews - structure, bullets, and tailoring.",
+    "icon": "📄",
+    "created_at": "2026-09-30T16:51:45.038Z"
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 11,
+  "fields": {
+    "name": "Personal Budgeting",
+    "slug": "personal-budgeting",
+    "category": "career",
+    "difficulty": "beginner",
+    "description": "Take control of your money - budgeting, saving, and debt strategies.",
+    "icon": "💰",
+    "created_at": "2026-09-30T16:51:45.643Z"
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 12,
+  "fields": {
+    "name": "Cooking Basics",
+    "slug": "cooking-basics",
+    "category": "practical",
+    "difficulty": "beginner",
+    "description": "Learn to cook real meals - from rice and eggs to sauces and meal prep.",
+    "icon": "🍳",
+    "created_at": "2026-09-30T16:51:45.988Z"
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 13,
+  "fields": {
+    "name": "First Aid Basics",
+    "slug": "first-aid-basics",
+    "category": "practical",
+    "difficulty": "beginner",
+    "description": "Learn life-saving first aid - CPR, choking, bleeding, burns, and more.",
+    "icon": "🚑",
+    "created_at": "2026-09-30T16:51:46.443Z"
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 14,
+  "fields": {
+    "name": "Drawing Basics",
+    "slug": "drawing-basics",
+    "category": "creative",
+    "difficulty": "beginner",
+    "description": "Learn to draw from scratch - shapes, shading, faces, and perspective.",
+    "icon": "🎨",
+    "created_at": "2026-09-30T16:53:22.422Z"
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 15,
+  "fields": {
+    "name": "Video Editing (CapCut)",
+    "slug": "video-editing-capcut",
+    "category": "creative",
+    "difficulty": "beginner",
+    "description": "Create professional-looking videos with CapCut - for social media or YouTube.",
+    "icon": "🎬",
+    "created_at": "2026-09-30T16:53:22.814Z"
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 16,
+  "fields": {
+    "name": "Stress Management",
+    "slug": "stress-management",
+    "category": "health",
+    "difficulty": "beginner",
+    "description": "Practical tools to reduce stress - breathing, sleep, boundaries, and more.",
+    "icon": "🧘",
+    "created_at": "2026-09-30T16:53:23.136Z"
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 17,
+  "fields": {
+    "name": "Exercise at Home",
+    "slug": "exercise-at-home",
+    "category": "health",
+    "difficulty": "beginner",
+    "description": "Get fit at home - 15-minute workouts, no gym, no equipment.",
+    "icon": "🏃",
+    "created_at": "2026-09-30T16:53:23.654Z"
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 18,
+  "fields": {
+    "name": "Community Organizing",
+    "slug": "community-organizing",
+    "category": "civic",
+    "difficulty": "beginner",
+    "description": "Learn to organize your community and win real change - from one issue at a time.",
+    "icon": "🌍",
+    "created_at": "2026-09-30T16:53:24.278Z"
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 1,
+  "fields": {
+    "skill": 1,
+    "title": "What is a variable?",
+    "content": "Think of a variable like a labeled box.\n\nImagine you have a box labeled \"age\" and you put the number 25 inside.\nNow, every time you say \"age\", everyone knows you mean the box with 25 in it.\n\nIn Python:\n    age = 25\n\nThat's it. You just created a variable called age and put 25 inside.\n\nCommon mistake:\n    =  means \"put this in the box\"\n    == means \"is this equal to?\"\n\nTry it:\n    name = \"Christian\"\n    print(name)\n    # Output: Christian\n\nYour turn: Create a variable with your name and print it.",
+    "order": 1,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:10:46.156Z",
+    "updated_at": "2026-09-30T19:48:45.598Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 1
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 2,
+  "fields": {
+    "skill": 1,
+    "title": "Making decisions with if",
+    "content": "Imagine you're at a bus stop. If the bus is full, you wait.\nIf it's empty, you board. That's an \"if\" statement.\n\n    if bus_is_full:\n        wait()\n    else:\n        board()\n\nTry this:\n    age = 20\n    if age >= 18:\n        print(\"You can vote!\")\n\nCommon mistakes:\n- Forgetting the colon (:) after if\n- Wrong indentation - Python cares about spaces",
+    "order": 2,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:10:46.180Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 3,
+  "fields": {
+    "skill": 2,
+    "title": "Greetings that work everywhere",
+    "content": "Simple greetings for any situation:\n\nFormal:\n  \"Good morning.\" / \"Good afternoon.\" / \"Good evening.\"\n\nCasual:\n  \"Hi!\" / \"Hey!\" / \"What's up?\"\n\nFriendly and safe:\n  \"How are you?\"  →  \"I'm fine, thank you. And you?\"\n\nTip: If you're nervous, start with a smile + \"Hi\".",
+    "order": 1,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:10:46.206Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 4,
+  "fields": {
+    "skill": 3,
+    "title": "Your first formula",
+    "content": "Excel is a giant calculator.\n\nEvery cell has an address like A1, B2, C3.\nThe letter is the column, the number is the row.\n\nTo add two numbers:\n1. Click cell A1 → type 5 → press Enter\n2. Click cell A2 → type 10 → press Enter\n3. Click cell A3 → type =A1+A2 → press Enter\n\nA3 will show 15.\n\nThe \"=\" tells Excel: this is a formula, calculate it.\n\nTry it:\n  A1: 100\n  A2: 250\n  A3: =A1+A2   →  shows 350\n\nThat's the start of everything in Excel.",
+    "order": 1,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:10:46.293Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 5,
+  "fields": {
+    "skill": 1,
+    "title": "Repeating things with loops",
+    "content": "Why write the same thing 100 times? Use a loop.\n\n    for i in range(5):\n        print(\"Hello\")\n\nThat prints \"Hello\" 5 times.\n\nTry it:\n    for name in [\"Ada\", \"Bola\", \"Chidi\"]:\n        print(f\"Hello, {name}!\")\n\nThe f before the quote means \"fill in the {}\".\nThis is called an f-string.",
+    "order": 3,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:25.863Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 6,
+  "fields": {
+    "skill": 1,
+    "title": "Lists - storing many things",
+    "content": "A list holds many values in order.\n\n    fruits = [\"apple\", \"banana\", \"mango\"]\n\nTo get the first one:\n    fruits[0]   # \"apple\"\n\nTo add a new one:\n    fruits.append(\"orange\")\n\nTry it:\n    shopping = [\"rice\", \"beans\", \"oil\"]\n    shopping.append(\"tomatoes\")\n    print(shopping)\n\nRemember: Python starts counting at 0.",
+    "order": 4,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:25.879Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 7,
+  "fields": {
+    "skill": 1,
+    "title": "Functions - reusable blocks",
+    "content": "A function is a recipe you can reuse.\n\n    def greet(name):\n        print(f\"Hello, {name}!\")\n\n    greet(\"Ada\")     # Hello, Ada!\n    greet(\"Bola\")    # Hello, Bola!\n\nThe def keyword means \"define a function\".\n\nTry it:\n    def add(a, b):\n        return a + b\n\n    print(add(3, 5))   # 8\n\nThe return sends a value back.",
+    "order": 5,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:25.887Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 8,
+  "fields": {
+    "skill": 1,
+    "title": "Dictionaries - labeled data",
+    "content": "A dictionary stores data with labels (keys).\n\n    person = {\"name\": \"Ada\", \"age\": 25}\n\n    print(person[\"name\"])   # Ada\n    print(person[\"age\"])    # 25\n\nAdd a new key:\n    person[\"city\"] = \"Lagos\"\n\nTry it:\n    student = {\"name\": \"Chidi\", \"score\": 85}\n    print(f\"{student['name']} scored {student['score']}\")",
+    "order": 6,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:25.894Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 9,
+  "fields": {
+    "skill": 1,
+    "title": "Reading user input",
+    "content": "Programs often need input from the user.\n\n    name = input(\"What's your name? \")\n    print(f\"Hello, {name}!\")\n\nNote: input() always returns a string.\n\nIf you need a number:\n    age = int(input(\"How old are you? \"))\n\nTry it - save as hello.py and run:\n    python hello.py",
+    "order": 7,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:25.901Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 10,
+  "fields": {
+    "skill": 1,
+    "title": "Writing your first file",
+    "content": "Python can read and write files.\n\nWrite a file:\n    with open(\"note.txt\", \"w\") as f:\n        f.write(\"Hello, world!\")\n\nRead a file:\n    with open(\"note.txt\", \"r\") as f:\n        print(f.read())\n\nThe \"w\" means write, \"r\" means read.\nThe with keyword closes the file automatically.",
+    "order": 8,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:25.908Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 11,
+  "fields": {
+    "skill": 1,
+    "title": "Errors and how to fix them",
+    "content": "Errors are normal - they tell you what's wrong.\n\nCommon ones:\n    NameError      - you used a name you didn't define\n    TypeError      - wrong type (like adding text + number)\n    IndentationError - wrong spacing\n\nExample:\n    print(age)   # NameError if age isn't defined\n\nRead the last line of the error first - it tells you the problem.",
+    "order": 9,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:25.914Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 12,
+  "fields": {
+    "skill": 1,
+    "title": "What to learn next",
+    "content": "You now know the basics! Where to go from here:\n\n1. Practice daily - 10 minutes is enough\n2. Build small things - a calculator, a to-do list\n3. Read other people's code on GitHub\n4. When you get stuck, that's normal. Ask for help.\n\nSoon you'll be teaching someone one step behind you.\n\nThat's the StepUp way.",
+    "order": 10,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:25.920Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 13,
+  "fields": {
+    "skill": 3,
+    "title": "Basic math functions",
+    "content": "Common formulas:\n    =SUM(A1:A10)     adds a range\n    =AVERAGE(A1:A10) gets the average\n    =MAX(A1:A10)     biggest number\n    =MIN(A1:A10)     smallest number\n\nTry it:\n    A1: 10\n    A2: 20\n    A3: 30\n    A4: =SUM(A1:A3)   → 60",
+    "order": 2,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:26.094Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 14,
+  "fields": {
+    "skill": 3,
+    "title": "Making your sheet look good",
+    "content": "Formatting makes data readable:\n\nBold: Ctrl+B\nCurrency: Home → $ icon\nBorders: Home → Border icon\nColors: Home → Fill color\n\nTip: Never use color alone to convey meaning - also use text or borders.",
+    "order": 3,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:26.109Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 15,
+  "fields": {
+    "skill": 3,
+    "title": "Sorting and filtering",
+    "content": "Sort a column:\n1. Click any cell in the column\n2. Data → Sort A→Z or Z→A\n\nFilter to show only some rows:\n1. Select your table\n2. Data → Filter\n3. Click the small arrow → choose what to show\n\nGreat for finding the top 10, biggest sales, etc.",
+    "order": 4,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:26.117Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 16,
+  "fields": {
+    "skill": 3,
+    "title": "Freeze panes - keep headers visible",
+    "content": "When scrolling, headers disappear. Fix that:\n\n1. Click a cell below the header row\n2. View → Freeze Panes → Freeze Panes\n\nNow scrolling keeps the top row visible. Essential for big tables.",
+    "order": 5,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:26.124Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 17,
+  "fields": {
+    "skill": 3,
+    "title": "Charts in 30 seconds",
+    "content": "Visualize data fast:\n\n1. Select your data (including headers)\n2. Insert → Chart (choose Column, Line, or Pie)\n3. Done.\n\nChoose chart type by story:\n- Compare values → Column\n- Show trend over time → Line\n- Show parts of a whole → Pie",
+    "order": 6,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:26.131Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 18,
+  "fields": {
+    "skill": 3,
+    "title": "VLOOKUP - find anything",
+    "content": "Need to look up info from a table?\n\n    =VLOOKUP(lookup_value, table_range, column_number, FALSE)\n\nExample: find the price of \"Apple\" from a fruit table:\n    =VLOOKUP(\"Apple\", A2:C100, 3, FALSE)\n\nFALSE means \"exact match\" - always use this.",
+    "order": 7,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:26.137Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 19,
+  "fields": {
+    "skill": 3,
+    "title": "IF statements",
+    "content": "Make Excel react to values:\n\n    =IF(A1>50, \"Pass\", \"Fail\")\n\nTranslation: If A1 is greater than 50, show \"Pass\". Otherwise \"Fail\".\n\nNested:\n    =IF(A1>=70, \"A\", IF(A1>=50, \"B\", \"C\"))",
+    "order": 8,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:26.144Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 20,
+  "fields": {
+    "skill": 3,
+    "title": "Conditional formatting",
+    "content": "Color cells automatically based on rules:\n\n1. Select your numbers\n2. Home → Conditional Formatting\n3. Choose \"Color Scales\" or \"Data Bars\"\n\nNow big numbers turn green, small turn red - at a glance.",
+    "order": 9,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:26.150Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 21,
+  "fields": {
+    "skill": 3,
+    "title": "Saving and sharing",
+    "content": "Save your work: Ctrl+S (always!)\n\nShare:\n- File → Share → send via email or link\n- Or File → Save As → PDF for reports\n\nPro tip: Save as .xlsx for editing.\nSave as .csv if another program needs the raw data.",
+    "order": 10,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:26.156Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 22,
+  "fields": {
+    "skill": 4,
+    "title": "What is ChatGPT (and what it's not)",
+    "content": "ChatGPT is a computer program that talks like a person.\n\nIt can: write, explain, summarize, translate, brainstorm.\nIt can't: know everything, always be right, replace your judgment.\n\nThink of it as a very well-read assistant - helpful, but you're in charge.",
+    "order": 1,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:26.300Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 23,
+  "fields": {
+    "skill": 4,
+    "title": "Writing your first prompt",
+    "content": "A prompt is what you type to the AI.\n\nBad prompt:\n    \"Write something.\"\n\nGood prompt:\n    \"Write a 3-paragraph email to my boss asking for Friday off.\n     Keep it polite and short.\"\n\nMore detail = better answer.",
+    "order": 2,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:26.307Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 24,
+  "fields": {
+    "skill": 4,
+    "title": "The 4-part prompt formula",
+    "content": "Best prompts have 4 parts:\n\n1. Role: \"You are a career coach.\"\n2. Task: \"Review my CV.\"\n3. Context: \"I'm applying for a junior developer job.\"\n4. Format: \"Give 5 specific suggestions, numbered.\"\n\nExample:\n    \"You are a career coach. Review my CV for a junior developer job.\n     Give 5 specific suggestions, numbered.\"\n",
+    "order": 3,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:26.314Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 25,
+  "fields": {
+    "skill": 4,
+    "title": "Getting better answers",
+    "content": "If the first answer isn't good, don't start over.\n\nSay:\n- \"Make it shorter.\"\n- \"Try again, more formal.\"\n- \"Give me 3 more options.\"\n- \"Explain it like I'm 10.\"\n\nChatting back and forth is how you get great results.",
+    "order": 4,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:26.320Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 26,
+  "fields": {
+    "skill": 4,
+    "title": "Using AI for learning",
+    "content": "Great ways to learn with AI:\n\n- \"Explain photosynthesis like I'm 12.\"\n- \"Quiz me on French verbs.\"\n- \"What did I get wrong in this sentence?\"\n- \"Give me 5 practice math problems.\"\n\nIt's like having a patient tutor - free, 24/7.",
+    "order": 5,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:26.327Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 27,
+  "fields": {
+    "skill": 4,
+    "title": "Using AI for writing",
+    "content": "AI helps with writing, but always review it.\n\nGood uses:\n- Draft an email\n- Fix grammar\n- Rewrite professionally\n- Summarize a long document\n\nRule: Never send AI writing without reading it first.\nThe AI doesn't know your boss, your friend, or your tone.",
+    "order": 6,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:26.333Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 28,
+  "fields": {
+    "skill": 4,
+    "title": "AI for work and business",
+    "content": "Business uses:\n\n- Write product descriptions\n- Draft customer replies\n- Brainstorm business names\n- Analyze a spreadsheet (paste data, ask questions)\n- Translate for international customers\n\nAlways fact-check numbers and names.",
+    "order": 7,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:26.339Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 29,
+  "fields": {
+    "skill": 4,
+    "title": "Images, audio, video with AI",
+    "content": "AI can also make:\n\n- Images (Midjourney, DALL·E)\n- Voice (ElevenLabs)\n- Video (Runway, CapCut AI)\n- Music (Suno)\n\nGreat for: presentations, social media, small business content.\n\nFree tools exist for all of these - start there.",
+    "order": 8,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:26.345Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 30,
+  "fields": {
+    "skill": 4,
+    "title": "Privacy and safety",
+    "content": "Never share with AI:\n- Passwords\n- Bank details\n- Other people's private info\n- Company secrets\n\nAssume anything you type might be stored.\n\nFor personal things, talk to a human - not an AI.",
+    "order": 9,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:26.352Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 31,
+  "fields": {
+    "skill": 4,
+    "title": "AI won't replace you",
+    "content": "AI won't replace you. But a person using AI well\nmight replace someone who doesn't.\n\nUse AI to:\n- Save time on boring tasks\n- Learn faster\n- Do work you couldn't do alone\n\nYour judgment, taste, and relationships are still yours.",
+    "order": 10,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:26.363Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 32,
+  "fields": {
+    "skill": 5,
+    "title": "Your home screen and apps",
+    "content": "Your home screen shows apps as icons.\n\n- Tap an app to open it.\n- Swipe left/right to see more screens.\n- The back button (◁) or swipe from left edge → go back.\n- The home button → return to home screen.\n\nDon't worry about breaking anything. You can't.",
+    "order": 1,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:26.545Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 33,
+  "fields": {
+    "skill": 5,
+    "title": "Making calls and sending texts",
+    "content": "To call:\n1. Open Phone app\n2. Type the number or pick from contacts\n3. Tap green call button\n\nTo text:\n1. Open Messages\n2. Tap +, choose contact\n3. Type your message → send arrow\n\nTip: Add contacts you call often. Saves time.",
+    "order": 2,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:26.552Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 34,
+  "fields": {
+    "skill": 5,
+    "title": "Using WhatsApp",
+    "content": "WhatsApp is for messaging with internet (free).\n\n- Chats: 1-to-1 or group messages\n- Voice notes: hold the mic 🎤 to record\n- Video calls: tap the camera icon\n- Photos: tap 📎 to send images\n\nEnd-to-end encrypted - only you and the receiver see messages.",
+    "order": 3,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:26.559Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 35,
+  "fields": {
+    "skill": 5,
+    "title": "Taking and sharing photos",
+    "content": "Open the Camera app.\n\n- Tap the round button to take a photo\n- Switch front/back camera (⇄ icon)\n- Video: swipe to \"Video\" mode, tap record\n\nShare:\n1. Open the photo in your gallery\n2. Tap Share → choose WhatsApp/email/etc.",
+    "order": 4,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:26.565Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 36,
+  "fields": {
+    "skill": 5,
+    "title": "Managing storage",
+    "content": "Phone full? Try this:\n\n1. Photos → back up to Google Photos → delete from phone\n2. Delete videos you don't need\n3. Settings → Apps → uninstall unused apps\n4. Settings → Storage → clear cache for big apps\n\nFree up 1-5 GB this way.",
+    "order": 5,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:26.572Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 37,
+  "fields": {
+    "skill": 5,
+    "title": "Battery saving",
+    "content": "Make your battery last longer:\n\n- Turn off Bluetooth and WiFi when not needed\n- Lower screen brightness\n- Close apps you're not using\n- Use Battery Saver mode\n\nCharge before it hits 20% - better for battery health.",
+    "order": 6,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:26.579Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 38,
+  "fields": {
+    "skill": 5,
+    "title": "Staying safe from scams",
+    "content": "Common scams:\n- \"You won a prize - send money to claim\"\n- \"Your bank account is locked - click this link\"\n- \"I love you - send me money\" (romance scam)\n\nRule: If it feels too good or urgent - it's a scam.\nNever send money or share passwords.",
+    "order": 7,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:26.586Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 39,
+  "fields": {
+    "skill": 5,
+    "title": "Backing up your data",
+    "content": "Back up so you don't lose everything.\n\nAndroid: Settings → Google → Backup → Back up now\niPhone: Settings → [your name] → iCloud → iCloud Backup → On\n\nDo it monthly. Takes a few minutes.",
+    "order": 8,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:26.592Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 40,
+  "fields": {
+    "skill": 5,
+    "title": "Using maps to get around",
+    "content": "Google Maps is your GPS.\n\n- Type destination → tap Directions\n- Choose walking/driving/transit\n- Blue dot shows you\n- Tap mic to speak destination\n\nDownload offline maps:\n1. Search city\n2. Tap bottom info → Download\n3. Works without internet!",
+    "order": 9,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:26.630Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 41,
+  "fields": {
+    "skill": 5,
+    "title": "Digital payments safely",
+    "content": "Mobile money / banking apps:\n\nSafe habits:\n- Use a screen lock (PIN, fingerprint)\n- Never share your PIN\n- Log out after use in public\n- Check SMS alerts for every transaction\n\nIf something looks wrong, call your bank - not the number in an SMS.",
+    "order": 10,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:47:26.638Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 42,
+  "fields": {
+    "skill": 2,
+    "title": "Introducing yourself",
+    "content": "Keep it short and warm.\n\n    \"Hi, I'm Ada. Nice to meet you.\"\n    \"Hello, my name is Chidi. What's your name?\"\n\nIf they ask \"Where are you from?\":\n    \"I'm from Nigeria.\"\n    \"I'm from Lagos, but I live in Abuja now.\"\n\nThat's all you need. Don't overthink it.",
+    "order": 2,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:32.298Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 43,
+  "fields": {
+    "skill": 2,
+    "title": "Small talk - safe topics",
+    "content": "Safe topics:\n- Weather: \"It's so hot today, isn't it?\"\n- Weekend: \"Do anything nice this weekend?\"\n- Food: \"Have you eaten lunch yet?\"\n- Work/school: \"How's work going?\"\n\nAvoid: money, politics, religion, personal questions.",
+    "order": 3,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:32.311Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 44,
+  "fields": {
+    "skill": 2,
+    "title": "Asking for help politely",
+    "content": "Start with:\n    \"Excuse me, could you help me?\"\n\nThen explain:\n    \"I'm looking for the train station.\"\n    \"Could you tell me where the bathroom is?\"\n\nAlways end with:\n    \"Thank you so much.\"\n    \"I really appreciate it.\" ",
+    "order": 4,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:32.321Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 45,
+  "fields": {
+    "skill": 2,
+    "title": "Ordering food",
+    "content": "In a restaurant:\n\n    \"Could I have the chicken and rice, please?\"\n    \"Can I get a bottle of water?\"\n    \"Excuse me - could we get the bill?\"\n\nSay \"please\" and \"thank you\" - they matter everywhere.",
+    "order": 5,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:32.329Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 46,
+  "fields": {
+    "skill": 2,
+    "title": "Talking about your day",
+    "content": "Practice past tense naturally:\n\n    \"I woke up early today.\"\n    \"I had a long meeting.\"\n    \"Then I went to the market.\"\n    \"After that, I cooked dinner.\"\n\nUse \"then\", \"after that\", \"later\" to tell a story.",
+    "order": 6,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:32.336Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 47,
+  "fields": {
+    "skill": 2,
+    "title": "Making plans",
+    "content": "Ask:\n    \"Are you free on Saturday?\"\n    \"Do you want to grab coffee?\"\n\nReply yes:\n    \"Yes, sounds great!\"\n\nReply no politely:\n    \"I'm sorry, I can't. Maybe next time?\"\n\nSuggest:\n    \"How about 3pm?\"\n    \"Does Sunday work for you?\" ",
+    "order": 7,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:32.343Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 48,
+  "fields": {
+    "skill": 2,
+    "title": "Apologizing and fixing mistakes",
+    "content": "If you make a mistake:\n\n    \"I'm so sorry - that was my fault.\"\n    \"I apologize for the misunderstanding.\"\n\nFix it:\n    \"Let me make it right.\"\n    \"How can I fix this?\"\n\nA good apology is short, honest, and has a fix.",
+    "order": 8,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:32.350Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 49,
+  "fields": {
+    "skill": 2,
+    "title": "Phone and video calls",
+    "content": "Starting:\n    \"Hello, this is Ada speaking.\"\n    \"Hi, is this a good time to talk?\"\n\nEnding:\n    \"Thanks for your time. Talk soon!\"\n    \"Have a great day!\"\n\nOn video: mute when not talking. Look at the camera, not yourself.",
+    "order": 9,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:32.357Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 50,
+  "fields": {
+    "skill": 2,
+    "title": "Confidence - speaking without fear",
+    "content": "Everyone makes mistakes. Even native speakers.\n\nRule 1: Speak slowly. Slow is better than fast-and-wrong.\nRule 2: If you don't know a word, describe it.\n    \"The thing you use to cut paper...\" → scissors\nRule 3: Practice out loud every day. 5 minutes.\nRule 4: Smile. People want you to succeed.",
+    "order": 10,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:32.364Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 51,
+  "fields": {
+    "skill": 6,
+    "title": "Bonjour! Saying hello",
+    "content": "Basic greetings:\n  Bonjour        - Hello / Good morning (formal)\n  Salut          - Hi (casual)\n  Bonsoir        - Good evening\n  Au revoir      - Goodbye\n  À bientôt      - See you soon\n\nNote: Bonjour is used until about 6pm.",
+    "order": 1,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:32.712Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 52,
+  "fields": {
+    "skill": 6,
+    "title": "Saying your name",
+    "content": "  Je m'appelle Ada.        - My name is Ada.\n  Comment tu t'appelles ?  - What's your name? (casual)\n  Comment vous appelez-vous ? - What's your name? (formal)\n\nReply:\n  Je m'appelle ___. Enchanté(e).",
+    "order": 2,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:32.723Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 53,
+  "fields": {
+    "skill": 6,
+    "title": "Basic numbers 1-20",
+    "content": "  1 un      11 onze\n  2 deux    12 douze\n  3 trois   13 treize\n  4 quatre  14 quatorze\n  5 cinq    15 quinze\n  6 six     16 seize\n  7 sept    17 dix-sept\n  8 huit    18 dix-huit\n  9 neuf    19 dix-neuf\n  10 dix    20 vingt",
+    "order": 3,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:32.733Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 54,
+  "fields": {
+    "skill": 6,
+    "title": "Please, thank you, sorry",
+    "content": "  S'il vous plaît   - Please (formal)\n  S'il te plaît     - Please (casual)\n  Merci             - Thank you\n  Merci beaucoup    - Thank you very much\n  De rien           - You're welcome\n  Pardon            - Sorry / Excuse me\n  Désolé(e)         - Sorry",
+    "order": 4,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:32.742Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 55,
+  "fields": {
+    "skill": 6,
+    "title": "Everyday words",
+    "content": "  Oui      - Yes\n  Non      - No\n  Peut-être - Maybe\n  Eau      - Water\n  Pain     - Bread\n  Café     - Coffee\n  Toilette - Toilet\n  Où ?     - Where?\n  Combien ? - How much?",
+    "order": 5,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:32.751Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 56,
+  "fields": {
+    "skill": 6,
+    "title": "At a restaurant",
+    "content": "  Une table pour deux, s'il vous plaît.\n     - A table for two, please.\n\n  Je voudrais...   - I would like...\n\n  L'addition, s'il vous plaît.\n     - The bill, please.\n\n  C'est délicieux ! - It's delicious!",
+    "order": 6,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:32.759Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 57,
+  "fields": {
+    "skill": 6,
+    "title": "Asking for directions",
+    "content": "  Où est la gare ?        - Where is the train station?\n  Où sont les toilettes ?  - Where are the toilets?\n  À droite                - To the right\n  À gauche                - To the left\n  Tout droit              - Straight ahead",
+    "order": 7,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:32.766Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 58,
+  "fields": {
+    "skill": 6,
+    "title": "Days and time",
+    "content": "Days:\n  lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche\n\nTime:\n  Quelle heure est-il ?   - What time is it?\n  Il est trois heures.    - It's 3 o'clock.\n\n  matin      - morning\n  après-midi - afternoon\n  soir       - evening",
+    "order": 8,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:32.773Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 59,
+  "fields": {
+    "skill": 6,
+    "title": "Simple sentences",
+    "content": "  Je suis fatigué(e).       - I'm tired.\n  J'ai faim.                - I'm hungry.\n  J'ai soif.                - I'm thirsty.\n  Je ne comprends pas.      - I don't understand.\n  Parlez-vous anglais ?     - Do you speak English?",
+    "order": 9,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:32.780Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 60,
+  "fields": {
+    "skill": 6,
+    "title": "Keep going!",
+    "content": "French is hard at first - but the ear adjusts after a few weeks.\n\nDaily practice:\n- 5 minutes listening (YouTube: \"French listening practice\")\n- 5 minutes speaking out loud\n- 1 new word a day\n\nIn 3 months, you'll be shocked how far you've come.",
+    "order": 10,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:32.786Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 61,
+  "fields": {
+    "skill": 7,
+    "title": "¡Hola! Saying hello",
+    "content": "  Hola         - Hi\n  Buenos días  - Good morning\n  Buenas tardes - Good afternoon\n  Buenas noches - Good evening/night\n  Adiós        - Goodbye\n  Hasta luego  - See you later",
+    "order": 1,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:33.044Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 62,
+  "fields": {
+    "skill": 7,
+    "title": "Your name",
+    "content": "  Me llamo Ada.         - My name is Ada.\n  ¿Cómo te llamas?      - What's your name? (casual)\n  ¿Cómo se llama usted? - What's your name? (formal)\n\nReply:\n  Me llamo ___. Mucho gusto.",
+    "order": 2,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:33.054Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 63,
+  "fields": {
+    "skill": 7,
+    "title": "Numbers 1-20",
+    "content": "  1 uno      11 once\n  2 dos      12 doce\n  3 tres     13 trece\n  4 cuatro   14 catorce\n  5 cinco    15 quince\n  6 seis     16 dieciséis\n  7 siete    17 diecisiete\n  8 ocho     18 dieciocho\n  9 nueve    19 diecinueve\n  10 diez    20 veinte",
+    "order": 3,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:33.063Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 64,
+  "fields": {
+    "skill": 7,
+    "title": "Polite words",
+    "content": "  Por favor    - Please\n  Gracias      - Thank you\n  De nada      - You're welcome\n  Perdón       - Sorry / Excuse me\n  Lo siento    - I'm sorry",
+    "order": 4,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:33.072Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 65,
+  "fields": {
+    "skill": 7,
+    "title": "Everyday words",
+    "content": "  Sí          - Yes\n  No          - No\n  Agua        - Water\n  Pan         - Bread\n  Café        - Coffee\n  Baño        - Bathroom\n  ¿Dónde?     - Where?\n  ¿Cuánto?    - How much?",
+    "order": 5,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:33.079Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 66,
+  "fields": {
+    "skill": 7,
+    "title": "At a restaurant",
+    "content": "  Una mesa para dos, por favor.\n     - A table for two, please.\n\n  Quisiera...     - I would like...\n\n  La cuenta, por favor.\n     - The bill, please.\n\n  ¡Está delicioso! - It's delicious!",
+    "order": 6,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:33.086Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 67,
+  "fields": {
+    "skill": 7,
+    "title": "Directions",
+    "content": "  ¿Dónde está el baño? - Where is the bathroom?\n  ¿Dónde está la estación? - Where is the station?\n  A la derecha   - To the right\n  A la izquierda - To the left\n  Derecho        - Straight ahead",
+    "order": 7,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:33.093Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 68,
+  "fields": {
+    "skill": 7,
+    "title": "Days and time",
+    "content": "Days:\n  lunes, martes, miércoles, jueves, viernes, sábado, domingo\n\nTime:\n  ¿Qué hora es?     - What time is it?\n  Son las tres.     - It's 3 o'clock.\n\n  mañana      - morning / tomorrow\n  tarde       - afternoon\n  noche       - evening/night",
+    "order": 8,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:33.099Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 69,
+  "fields": {
+    "skill": 7,
+    "title": "Basic sentences",
+    "content": "  Estoy cansado/a.       - I'm tired.\n  Tengo hambre.          - I'm hungry.\n  Tengo sed.             - I'm thirsty.\n  No entiendo.           - I don't understand.\n  ¿Habla inglés?         - Do you speak English?",
+    "order": 9,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:33.107Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 70,
+  "fields": {
+    "skill": 7,
+    "title": "Keep learning!",
+    "content": "Spanish is one of the friendliest languages to learn.\n\nDaily 10 minutes:\n- Listen to music in Spanish\n- Watch shows with subtitles\n- Speak out loud - even alone\n\nIn 3 months, you'll understand basic conversations.",
+    "order": 10,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:33.115Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 71,
+  "fields": {
+    "skill": 8,
+    "title": "What is a fraction?",
+    "content": "A fraction is part of a whole.\n\n  1/2 means: one piece out of two equal pieces.\n  The top number (1) = numerator   → how many pieces you have\n  The bottom (2) = denominator    → how many pieces total\n\nPicture a pizza cut into 4 slices. You eat 1 slice → 1/4.",
+    "order": 1,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:33.256Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 72,
+  "fields": {
+    "skill": 8,
+    "title": "Equivalent fractions",
+    "content": "Same value, different look.\n\n  1/2  =  2/4  =  3/6  =  50/100\n\nRule: multiply top AND bottom by the same number.\n\n  1/2 × 2/2 = 2/4\n\nMultiply top only? Wrong. Always both.",
+    "order": 2,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:33.263Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 73,
+  "fields": {
+    "skill": 8,
+    "title": "Adding fractions (same bottom)",
+    "content": "When denominators match, just add the tops.\n\n  1/5 + 2/5 = 3/5\n\nDenominator stays the same. Think: 1 slice + 2 slices = 3 slices.",
+    "order": 3,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:33.273Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 74,
+  "fields": {
+    "skill": 8,
+    "title": "Adding fractions (different bottom)",
+    "content": "Different denominators? Find a common one.\n\n  1/2 + 1/3\n\nCommon denominator is 6:\n  1/2 = 3/6\n  1/3 = 2/6\n  3/6 + 2/6 = 5/6\n\nMethod: find LCM of the two bottoms.",
+    "order": 4,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:33.281Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 75,
+  "fields": {
+    "skill": 8,
+    "title": "Subtracting fractions",
+    "content": "Same idea as adding.\n\n  3/4 − 1/4 = 2/4 = 1/2\n\nDifferent denominators?\n  1/2 − 1/3 = 3/6 − 2/6 = 1/6",
+    "order": 5,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:33.314Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 76,
+  "fields": {
+    "skill": 8,
+    "title": "Multiplying fractions",
+    "content": "Multiply straight across - top × top, bottom × bottom.\n\n  2/3 × 4/5 = 8/15\n\nNo common denominator needed!",
+    "order": 6,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:33.352Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 77,
+  "fields": {
+    "skill": 8,
+    "title": "Dividing fractions",
+    "content": "Flip the second fraction and multiply.\n\n  1/2 ÷ 1/4  =  1/2 × 4/1  =  4/2  =  2\n\nRemember: \"Keep, Change, Flip\"\n  Keep the first fraction\n  Change ÷ to ×\n  Flip the second fraction",
+    "order": 7,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:33.359Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 78,
+  "fields": {
+    "skill": 8,
+    "title": "What is a decimal?",
+    "content": "A decimal is another way to write a fraction.\n\n  1/2 = 0.5\n  1/4 = 0.25\n  3/4 = 0.75\n\nThe dot separates whole numbers from parts.\n  2.75 = 2 wholes + 0.75",
+    "order": 8,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:33.369Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 79,
+  "fields": {
+    "skill": 8,
+    "title": "Converting fractions ↔ decimals",
+    "content": "Fraction → Decimal: divide the top by the bottom.\n  3/4 = 3 ÷ 4 = 0.75\n\nDecimal → Fraction:\n  0.5 = 5/10 = 1/2\n  0.25 = 25/100 = 1/4\n\nWrite the decimal over 10, 100, 1000... then simplify.",
+    "order": 9,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:33.379Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 80,
+  "fields": {
+    "skill": 8,
+    "title": "Real-life fractions",
+    "content": "Where you use fractions daily:\n\n- Cooking: 1/2 cup of rice\n- Shopping: 1/3 off sale\n- Time: quarter past 3 (1/4 hour)\n- Money: 25 cents = 1/4 of a dollar\n\nPractice: next shopping trip, calculate discounts in your head.",
+    "order": 10,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:33.388Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 81,
+  "fields": {
+    "skill": 9,
+    "title": "What is algebra?",
+    "content": "Algebra uses letters to represent unknown numbers.\n\n  x + 3 = 7\n\nWhat number plus 3 equals 7? x = 4.\n\nLetters are placeholders. Once you find the value, you've \"solved for x\".",
+    "order": 1,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:33.657Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 82,
+  "fields": {
+    "skill": 9,
+    "title": "Solving simple equations",
+    "content": "Rule: whatever you do to one side, do to the other.\n\n  x + 5 = 12\n  x + 5 − 5 = 12 − 5\n  x = 7\n\nThe goal: get x alone on one side.",
+    "order": 2,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:33.668Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 83,
+  "fields": {
+    "skill": 9,
+    "title": "The order of operations (PEMDAS)",
+    "content": "Follow this order:\n  P - Parentheses ( )\n  E - Exponents (²)\n  M/D - Multiply & Divide (left to right)\n  A/S - Add & Subtract (left to right)\n\nExample:\n  2 + 3 × 4 = 2 + 12 = 14   (multiply first!)\n\nNot: (2+3) × 4 = 20 - that's only if parentheses are there.",
+    "order": 3,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:33.677Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 84,
+  "fields": {
+    "skill": 9,
+    "title": "Negative numbers",
+    "content": "Rules to remember:\n\n  (−) + (−) = more negative     −3 + −2 = −5\n  (+) + (−) = subtract         5 + (−3) = 2\n  (−) × (−) = positive         (−3) × (−4) = 12\n  (−) × (+) = negative         (−3) × 4 = −12\n\nTwo negatives make a positive - only when multiplying/dividing.",
+    "order": 4,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:33.685Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 85,
+  "fields": {
+    "skill": 9,
+    "title": "Variables on both sides",
+    "content": "  2x + 3 = x + 7\n\nMove x's to one side:\n  2x − x + 3 = 7\n  x + 3 = 7\n  x = 4\n\nGet all the x's together. Then solve normally.",
+    "order": 5,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:33.692Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 86,
+  "fields": {
+    "skill": 9,
+    "title": "Distributive property",
+    "content": "  a(b + c) = ab + ac\n\nExample:\n  3(x + 4) = 3x + 12\n\nMultiply what's outside by each term inside.",
+    "order": 6,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:33.699Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 87,
+  "fields": {
+    "skill": 9,
+    "title": "Solving with fractions",
+    "content": "  x/3 + 2 = 5\n\nStep 1: Subtract 2 from both sides.\n  x/3 = 3\n\nStep 2: Multiply both sides by 3.\n  x = 9\n\nTo undo division, multiply. To undo multiplication, divide.",
+    "order": 7,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:33.706Z",
+    "updated_at": "2026-10-01T15:14:00.001Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 2
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 88,
+  "fields": {
+    "skill": 9,
+    "title": "Word problems",
+    "content": "Translate words into equations:\n\n  \"5 more than a number\" → x + 5\n  \"3 times a number\"     → 3x\n  \"Half of a number\"     → x/2\n\nExample:\n  \"The sum of 3 times a number and 5 is 20.\"\n  → 3x + 5 = 20\n  → 3x = 15\n  → x = 5",
+    "order": 8,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:33.713Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 89,
+  "fields": {
+    "skill": 9,
+    "title": "Graphing simple equations",
+    "content": "  y = 2x + 1\n\nPick x values and find y:\n  x=0 → y=1\n  x=1 → y=3\n  x=2 → y=5\n\nPlot the points and connect them → straight line.\n\nSlope = 2 (line goes up 2 for every 1 right)\nIntercept = 1 (crosses y-axis at 1)",
+    "order": 9,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:33.719Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 90,
+  "fields": {
+    "skill": 9,
+    "title": "Why algebra matters",
+    "content": "Algebra is the language of patterns.\n\nYou'll use it for:\n- Calculating bills and interest\n- Programming (every code uses variables)\n- Science (physics, chemistry, biology)\n- Business decisions (profit, cost, price)\n\nOnce it clicks, it unlocks everything else.",
+    "order": 10,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:49:33.726Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 91,
+  "fields": {
+    "skill": 10,
+    "title": "What a CV is really for",
+    "content": "A CV has one job: get you an interview. Not the job - the interview.\n\nThat means:\n- Recruiters spend 6-10 seconds on it\n- It must be scannable in seconds\n- Every word must earn its place\n\nThink: newspaper ad, not diary.",
+    "order": 1,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:45.058Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 92,
+  "fields": {
+    "skill": 10,
+    "title": "The one-page rule",
+    "content": "For under 10 years of experience: ONE page.\n\nFor over 10 years or academic roles: two pages max.\n\nWhy?\n- Recruiters don't read - they scan\n- Long CVs hide your best stuff\n- Concise = confident\n\nCut ruthlessly. If it doesn't help, delete it.",
+    "order": 2,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:45.070Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 93,
+  "fields": {
+    "skill": 10,
+    "title": "The winning structure",
+    "content": "Top-to-bottom order:\n\n1. Name + contact (email, phone, city, LinkedIn)\n2. Short professional summary (2-3 lines)\n3. Experience (most recent first)\n4. Skills\n5. Education\n6. (Optional) Projects, certifications, languages\n\nSimple. No photos (unless required in your country). No age. No marital status.",
+    "order": 3,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:45.081Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 94,
+  "fields": {
+    "skill": 10,
+    "title": "Writing a killer summary",
+    "content": "3 lines at the top that sell you.\n\nFormula:\n  [Who you are] + [What you do] + [Your best proof]\n\nExample:\n  \"Junior web developer with 2 years building Django apps.\n   Delivered 8 client projects on time.\n   Passionate about clean code and user-focused design.\"\n\nNo: \"Hardworking team player seeking opportunities.\" ",
+    "order": 4,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:45.089Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 95,
+  "fields": {
+    "skill": 10,
+    "title": "The experience section - bullets that win",
+    "content": "Formula for every bullet:\n\n  [Action verb] + [What you did] + [Result/Number]\n\nBad:\n  \"Responsible for managing social media.\"\n\nGood:\n  \"Grew Instagram following from 500 to 12,000 in 6 months\n   by launching daily behind-the-scenes content.\"\n\nNumbers > adjectives. Always.",
+    "order": 5,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:45.097Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 96,
+  "fields": {
+    "skill": 10,
+    "title": "Action verbs to use (and avoid)",
+    "content": "Strong verbs:\n  Led, Built, Grew, Designed, Launched, Reduced,\n  Increased, Delivered, Managed, Created, Improved\n\nWeak verbs (avoid):\n  Responsible for, Helped with, Worked on,\n  Assisted in, Involved in\n\nStart every bullet with a strong verb. No \"I\".",
+    "order": 6,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:45.103Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 97,
+  "fields": {
+    "skill": 10,
+    "title": "Skills section - what to list",
+    "content": "Split into two groups:\n\nTechnical: Python, Excel, Photoshop, SQL, Canva\n\nSoft: Leadership, Communication, Problem-solving\n\nList 8-12 max. Don't list things you can't discuss in an interview.\n\nSkip: \"Microsoft Word\" (everyone knows it). Include only if the job explicitly asks.",
+    "order": 7,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:45.110Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 98,
+  "fields": {
+    "skill": 10,
+    "title": "Tailor for every job",
+    "content": "The #1 mistake: sending the same CV to everyone.\n\nFor each application:\n1. Read the job description twice\n2. Highlight 5 keywords they use\n3. Make sure those words appear in your CV\n4. Reorder bullets to lead with what they need\n\n10 minutes of tailoring > 100 applications.",
+    "order": 8,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:45.117Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 99,
+  "fields": {
+    "skill": 10,
+    "title": "Design that actually works",
+    "content": "Formatting rules:\n\n- Font: Calibri, Arial, or Helvetica (readable)\n- Size: 10-12pt body, 14-18pt name\n- Margins: 2cm\n- White space: your friend - don't cram\n- Bold for job titles and section headers\n- No colors, no photos, no fancy graphics (unless you're a designer)\n\nSave as PDF. Always.",
+    "order": 9,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:45.124Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 100,
+  "fields": {
+    "skill": 10,
+    "title": "Common mistakes that kill CVs",
+    "content": "Instant rejection triggers:\n\n❌ Typos or spelling errors\n❌ Inconsistent dates or formatting\n❌ \"References available on request\" (obvious)\n❌ Gaps without explanation\n❌ Fake achievements (they'll ask)\n❌ Generic summary (\"seeking a challenging role\")\n❌ Applying with the same CV everywhere\n\nFix these → your response rate doubles.",
+    "order": 10,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:45.131Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 101,
+  "fields": {
+    "skill": 11,
+    "title": "Why budgets fail",
+    "content": "Most budgets fail because they're too strict, too complex,\nor based on money you don't actually have.\n\nThe fix:\n- Start with what you actually earn\n- Track for 30 days before changing anything\n- Make it simple (one page, one app, one number)\n\nA boring budget you follow beats a perfect one you abandon.",
+    "order": 1,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:45.658Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 102,
+  "fields": {
+    "skill": 11,
+    "title": "The 50/30/20 rule",
+    "content": "A simple starting framework:\n\n  50% - Needs (rent, food, transport, bills)\n  30% - Wants (eating out, clothes, entertainment)\n  20% - Savings & debt repayment\n\nNot perfect for everyone, but a great starting point.\n\nIf you can't hit 20% savings yet, aim for 5% then grow it 1% at a time.",
+    "order": 2,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:45.667Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 103,
+  "fields": {
+    "skill": 11,
+    "title": "Track every naira for 30 days",
+    "content": "For one month, write down EVERY expense.\n\nUse: notebook, phone notes, or apps like Wallet by BudgetBakers.\n\nAt the end of 30 days, you'll see:\n- Where money actually goes (surprise!)\n- What to cut first\n- What you can't believe you spent\n\nDo this before setting any budget. Data > guessing.",
+    "order": 3,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:45.676Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 104,
+  "fields": {
+    "skill": 11,
+    "title": "Build a starter emergency fund",
+    "content": "Before investing, save 1 month of expenses in cash.\n\nWhy: so one broken phone or medical bill doesn't destroy you.\n\nHow:\n- Open a separate savings account\n- Automate a transfer every payday\n- Don't touch it unless truly an emergency\n\nOnce you hit 1 month, aim for 3, then 6.",
+    "order": 4,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:45.683Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 105,
+  "fields": {
+    "skill": 11,
+    "title": "Cut without suffering",
+    "content": "Big wins first:\n\n1. Subscriptions you forgot (check bank statement)\n2. Eating out - cut 30%, not 100%\n3. Transport - carpool, walk short trips\n4. Phone plan - switch to cheaper data\n5. Rent - can you negotiate or move?\n\nSmall wins matter, but big bills matter more.",
+    "order": 5,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:45.690Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 106,
+  "fields": {
+    "skill": 11,
+    "title": "Pay off debt smartly",
+    "content": "Two methods:\n\nSnowball:\n- Pay minimum on all\n- Put extra on smallest debt\n- When it clears, roll to next\n\nAvalanche:\n- Pay minimum on all\n- Put extra on highest-interest debt first\n\nSnowball = motivation. Avalanche = math. Pick what works for you.\n\nAlways pay minimums. Never miss one.",
+    "order": 6,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:45.697Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 107,
+  "fields": {
+    "skill": 11,
+    "title": "Save for irregular expenses",
+    "content": "Big expenses that catch people off guard:\n\n- Rent advance (3-6 months upfront)\n- School fees\n- Weddings / funerals\n- Car repairs / insurance\n- Holidays\n\nPlan: divide the annual cost by 12. Save that monthly.\n  Annual car insurance ₦120,000 → save ₦10,000/month.",
+    "order": 7,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:45.704Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 108,
+  "fields": {
+    "skill": 11,
+    "title": "Automate everything",
+    "content": "Your future self is lazy. So is your present self.\n\nSetup (once, then forget):\n- Payday → automatic transfer to savings\n- Bills → auto-debit\n- Investments → auto-buy monthly\n\nYou can't spend money that's already moved.",
+    "order": 8,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:45.712Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 109,
+  "fields": {
+    "skill": 11,
+    "title": "Investing basics",
+    "content": "Rules:\n1. Only invest money you won't need for 5+ years\n2. Diversify (don't put all in one thing)\n3. Low fees matter a LOT over time\n4. Ignore hot tips - do your own research\n\nIn Nigeria: treasury bills, mutual funds, index funds, real estate.\nStart small. Consistency beats size.\n\nNever invest in something you don't understand.",
+    "order": 9,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:45.720Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 110,
+  "fields": {
+    "skill": 11,
+    "title": "Review every month",
+    "content": "15 minutes on the last day of the month:\n\n- Did I stay within budget?\n- What surprised me?\n- What should I adjust next month?\n\nBudgets evolve. What worked in January may not in July.\nTrack → Review → Adjust. Repeat forever.",
+    "order": 10,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:45.728Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 111,
+  "fields": {
+    "skill": 12,
+    "title": "The 5 things every cook must know",
+    "content": "1. Read the recipe first (all the way)\n2. Prep everything before you start (mise en place)\n3. Taste as you go\n4. Salt in layers, not at the end\n5. Clean as you cook\n\nThese five rules separate cooks from chefs.",
+    "order": 1,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:46.010Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 112,
+  "fields": {
+    "skill": 12,
+    "title": "Knife basics",
+    "content": "You only need one good knife (8-inch chef's knife).\n\nBasic cuts:\n- Dice: small cubes\n- Julienne: thin sticks\n- Chop: rough pieces\n- Mince: very small\n\nSafety:\n- Curl fingers under (claw grip)\n- Sharp knife > dull knife (dull slips)\n- Cut on a wooden or plastic board, never glass",
+    "order": 2,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:46.022Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 113,
+  "fields": {
+    "skill": 12,
+    "title": "Rice that never fails",
+    "content": "Perfect rice every time:\n\n1. Rinse rice until water runs clear (removes starch)\n2. 1 cup rice : 2 cups water\n3. Bring to boil, add salt\n4. Cover, lowest heat, 15 minutes\n5. OFF the heat, sit 5 more minutes\n6. Fluff with fork, never stir\n\nNever lift the lid while cooking.",
+    "order": 3,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:46.032Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 114,
+  "fields": {
+    "skill": 12,
+    "title": "Eggs - 5 ways",
+    "content": "Boiled:\n  6 min = soft, 10 min = hard. Ice bath after.\n\nFried:\n  Medium heat, butter/oil, 2 min each side.\n\nScrambled:\n  Low heat, stir constantly, remove before fully set.\n\nOmelette:\n  Beat, pour, fold when edges set.\n\nPoached:\n  Boiling water + splash of vinegar, swirl, drop egg in, 3 min.",
+    "order": 4,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:46.040Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 115,
+  "fields": {
+    "skill": 12,
+    "title": "Cooking protein (meat, chicken, fish)",
+    "content": "Golden rules:\n\n- Pat dry before cooking (wet meat steams, doesn't brown)\n- Salt 15-30 min before cooking\n- Get the pan HOT before adding meat\n- Don't move it - let it brown (Maillard reaction = flavor)\n- Rest meat 5 min before cutting (juices redistribute)\n\nChicken: cook to 74°C / 165°F internal\nFish: flakes easily with fork = done\nBeef: depends on cut, 55-70°C for medium",
+    "order": 5,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:46.049Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 116,
+  "fields": {
+    "skill": 12,
+    "title": "Vegetables that taste good",
+    "content": "Roasting: 200°C, olive oil, salt. 20-30 min. Sweet and deep.\n\nSautéing: high heat, quick, keep them crisp.\n\nSteaming: preserves nutrients, clean taste.\n\nBoiling: only for potatoes, corn, some greens. Don't overcook.\n\nRule: Vegetables should be colorful, not grey.",
+    "order": 6,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:46.057Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 117,
+  "fields": {
+    "skill": 12,
+    "title": "Seasoning like a pro",
+    "content": "Salt is #1. Everything else builds on it.\n\nLayers of flavor:\n1. Salt - brings out natural taste\n2. Acid (lemon, vinegar) - brightness\n3. Fat (oil, butter) - richness\n4. Heat (pepper, chili) - kick\n5. Herbs/spices - character\n\nAlways taste before serving. Then taste again.",
+    "order": 7,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:46.064Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 118,
+  "fields": {
+    "skill": 12,
+    "title": "Sauces that go with anything",
+    "content": "Tomato sauce:\n  Onion + garlic + tomatoes + salt + basil. Simmer 30 min.\n\nPepper sauce:\n  Blend peppers, onion, tomato. Fry in oil. 20 min.\n\nWhite sauce:\n  Butter + flour + milk. Whisk. Salt + pepper.\n\nPesto:\n  Blend basil + nuts + garlic + oil + parmesan.\n\nEach sauce takes any dish from plain to special.",
+    "order": 8,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:46.072Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 119,
+  "fields": {
+    "skill": 12,
+    "title": "Meal prep for the week",
+    "content": "Sunday 2-hour prep saves 10+ hours:\n\n- Cook a big pot of rice (refrigerate in portions)\n- Roast a tray of vegetables\n- Cook chicken/beans\n- Chop onions, peppers, ginger; freeze in bags\n- Make 2 sauces\n\nThen weekdays = assemble, not cook. Dinner in 15 min.",
+    "order": 9,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:46.079Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 120,
+  "fields": {
+    "skill": 12,
+    "title": "Cooking for one (or a family)",
+    "content": "For one:\n- Cook once, eat 3 times (leftovers are gold)\n- Invest in good containers\n- Learn 5 dishes you love, rotate them\n\nFor family:\n- Double every recipe (same effort, half the cost per plate)\n- Get everyone involved in the kitchen\n- Batch-cook on weekends\n\nCooking is a life skill. The more you do it, the easier it gets.",
+    "order": 10,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:46.086Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 121,
+  "fields": {
+    "skill": 13,
+    "title": "The DR ABC of first aid",
+    "content": "Before you do anything, remember:\n\n  D - Danger (is the scene safe? Protect yourself first)\n  R - Response (is the person awake? Shout \"Are you OK?\")\n  A - Airway (is it clear? Tilt head, lift chin)\n  B - Breathing (look, listen, feel for 10 seconds)\n  C - CPR (if not breathing, start compressions)\n\nThis is the universal emergency checklist. Learn it.",
+    "order": 1,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:46.459Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 122,
+  "fields": {
+    "skill": 13,
+    "title": "Calling for emergency help",
+    "content": "In Nigeria: 112 (works nationwide for emergencies)\n\nWhen you call, say:\n1. Your location (landmarks help)\n2. What happened\n3. How many people are hurt\n4. The condition of the person\n\nStay on the line. Follow their instructions.\nDon't hang up until they say so.",
+    "order": 2,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:46.468Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 123,
+  "fields": {
+    "skill": 13,
+    "title": "CPR - saving someone's life",
+    "content": "Only if the person is NOT breathing.\n\nAdult CPR:\n1. Place heel of one hand on center of chest\n2. Other hand on top, fingers interlocked\n3. Push HARD and FAST - 100-120 per minute\n4. Depth: 5-6 cm\n5. Don't stop until help arrives or person wakes\n\nSong trick: \"Stayin' Alive\" by Bee Gees is exactly the right tempo.\n\nPush. Don't be afraid - they're already unconscious.",
+    "order": 3,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:46.477Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 124,
+  "fields": {
+    "skill": 13,
+    "title": "Choking - adults and children",
+    "content": "Adult/child choking:\n\n1. Ask: \"Are you choking?\" (if they can talk, they're not fully choking)\n2. If yes: 5 back blows between shoulder blades\n3. Then 5 abdominal thrusts (Heimlich maneuver)\n4. Repeat until object comes out\n\nFor babies (<1 year):\n- 5 back blows + 5 chest thrusts (not abdominal)\n\nNever put fingers in the throat blindly - you may push it deeper.",
+    "order": 4,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:46.484Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 125,
+  "fields": {
+    "skill": 13,
+    "title": "Bleeding - stopping it fast",
+    "content": "1. Apply firm direct pressure with clean cloth\n2. Don't lift to check - hold 5-10 min\n3. If bleeding through, add another cloth on top (don't remove the first)\n4. Elevate the limb above the heart if possible\n5. Call for help if bleeding won't stop\n\nFor deep cuts with embedded object: DON'T remove it. Stabilize around it.",
+    "order": 5,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:46.492Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 126,
+  "fields": {
+    "skill": 13,
+    "title": "Burns - what to do",
+    "content": "For small burns:\n\n1. Cool running water for 10-20 minutes (not ice!)\n2. Remove rings/watch from burned area (before swelling)\n3. Cover loosely with clean, non-stick cloth\n4. Don't pop blisters\n5. Don't use butter, toothpaste, or oil\n\nGo to hospital if:\n- Burn is bigger than the palm of the hand\n- On face, hands, feet, or joints\n- White, brown, or charred skin\n- Caused by electricity or chemicals",
+    "order": 6,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:46.499Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 127,
+  "fields": {
+    "skill": 13,
+    "title": "Fractures and sprains",
+    "content": "If you suspect a broken bone:\n\n1. Don't move the person (unless in danger)\n2. Immobilize the injured area (splint with cloth + stick)\n3. Apply ice wrapped in cloth for sprains\n4. Elevate if possible\n5. Get medical help\n\nSigns of fracture: severe pain, deformity, can't move, swelling\nSigns of sprain: pain, swelling, bruising but no deformity",
+    "order": 7,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:46.508Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 128,
+  "fields": {
+    "skill": 13,
+    "title": "Fainting and shock",
+    "content": "Fainting:\n1. Lay person flat\n2. Raise legs 30cm above heart\n3. Loosen tight clothing\n4. Fresh air, cool cloth on forehead\n5. They should wake in 1-2 min\n\nShock (after accident/bleeding):\n- Pale, cold, clammy skin\n- Rapid weak pulse\n- Confusion, thirst\n\nDo: lay flat, keep warm, don't give food/drink, get help fast.",
+    "order": 8,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:46.517Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 129,
+  "fields": {
+    "skill": 13,
+    "title": "Seizures",
+    "content": "When someone has a seizure:\n\nDO:\n- Clear hard objects around them\n- Cushion their head\n- Turn on side (recovery position) after\n- Time the seizure\n- Stay calm, stay with them\n\nDON'T:\n- Hold them down\n- Put anything in their mouth\n- Give water during\n\nCall emergency if seizure lasts >5 min or it's their first one.",
+    "order": 9,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:46.525Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 130,
+  "fields": {
+    "skill": 13,
+    "title": "Building a home first aid kit",
+    "content": "Every home needs:\n\n- Adhesive bandages (various sizes)\n- Gauze pads + medical tape\n- Antiseptic (Dettol, iodine)\n- Pain relief (paracetamol)\n- Thermometer\n- Scissors + tweezers\n- Gloves (latex)\n- Oral rehydration salts (ORS)\n- Cotton wool\n- Triangular bandage\n\nStore in a clean, dry, easy-to-reach place.\nCheck expiration dates every 6 months.",
+    "order": 10,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:51:46.532Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 131,
+  "fields": {
+    "skill": 14,
+    "title": "Anyone can learn to draw",
+    "content": "Drawing is a skill, not a talent.\n\nThe myth: some people are \"born artists.\"\nThe truth: drawing is like writing - anyone can learn with practice.\n\nStart today with a pencil and any paper. That's it.\nYour first drawings will be bad. Everyone's are. Keep going.",
+    "order": 1,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:22.444Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 132,
+  "fields": {
+    "skill": 14,
+    "title": "Tools you actually need",
+    "content": "To start:\n- A pencil (HB or 2B)\n- Paper (any)\n- An eraser\n\nThat's it. Really.\n\nLater you might add:\n- Blending stump\n- Different pencils (2H to 6B)\n- Sketchbook\n\nExpensive tools don't make better art. Practice does.",
+    "order": 2,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:22.457Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 133,
+  "fields": {
+    "skill": 14,
+    "title": "Drawing basic shapes",
+    "content": "Everything is made of 4 shapes:\n\n- Sphere (circle)\n- Cube (square)\n- Cylinder (rounded rectangle)\n- Cone (triangle)\n\nA face = oval + circle + 2 cylinders + 2 spheres\nA hand = rectangle + 5 cylinders\nA tree = cylinder + sphere\n\nTrain your eye to see shapes inside everything.",
+    "order": 3,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:22.466Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 134,
+  "fields": {
+    "skill": 14,
+    "title": "Holding your pencil correctly",
+    "content": "Two grips - use both:\n\n1. Writing grip (like a pen):\n   - For details, small work\n   - Firm control\n\n2. Overhand grip:\n   - For sketching, shading\n   - Freer motion\n\nStart with overhand for the rough sketch.\nSwitch to writing grip for details.",
+    "order": 4,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:22.476Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 135,
+  "fields": {
+    "skill": 14,
+    "title": "Lines and strokes",
+    "content": "Practice these daily for 5 minutes:\n\n- Straight lines (all directions)\n- Curved lines (smooth arcs)\n- Circles (small to large)\n- Hatching (parallel lines)\n- Cross-hatching (overlapping lines)\n\nConfident lines > perfect lines.\nDraw from your shoulder, not your wrist.",
+    "order": 5,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:22.486Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 136,
+  "fields": {
+    "skill": 14,
+    "title": "Light and shadow - the magic",
+    "content": "Everything you draw has:\n\n1. Highlight (brightest spot)\n2. Mid-tone (base color)\n3. Shadow (dark side)\n4. Cast shadow (on the ground)\n5. Reflected light (bounce)\n\nDraw the shadow shapes BEFORE shading.\nShadow does 80% of the work for realism.",
+    "order": 6,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:22.494Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 137,
+  "fields": {
+    "skill": 14,
+    "title": "Perspective - making things look 3D",
+    "content": "One-point perspective:\n\n1. Draw a horizon line\n2. Place a dot (vanishing point)\n3. Draw lines from the dot outward\n4. Everything shrinks toward the dot\n\nPractice: draw a road, a room, a hallway.\n\nTwo-point perspective: two dots on the horizon.\nUsed for corners of buildings.\n\nThis is the secret to realistic depth.",
+    "order": 7,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:22.503Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 138,
+  "fields": {
+    "skill": 14,
+    "title": "Drawing faces",
+    "content": "Face proportions (front view):\n\n- Head is an oval\n- Eyes at the middle of the head (not top!)\n- 5 eyes fit across the face width\n- Nose halfway between eyes and chin\n- Mouth halfway between nose and chin\n- Ears from eyes to nose level\n\nDraw these guidelines lightly. Then build the face.",
+    "order": 8,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:22.511Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 139,
+  "fields": {
+    "skill": 14,
+    "title": "Shading techniques",
+    "content": "Four ways to shade:\n\n1. Smooth (blending with finger or stump) - soft, realistic\n2. Hatching (parallel lines) - sketchy, energetic\n3. Cross-hatching (grid of lines) - dense, textured\n4. Stippling (dots) - patient, illustrative\n\nPick one and master it. Then learn the next.\n\nWhatever you choose - build layers slowly. Don't press hard.",
+    "order": 9,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:22.518Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 140,
+  "fields": {
+    "skill": 14,
+    "title": "Daily practice plan",
+    "content": "15 minutes a day beats 2 hours once a week.\n\nWeekly plan:\n- Mon: 15 min lines and shapes\n- Tue: 15 min still life (cup, fruit)\n- Wed: 15 min a face from reference\n- Thu: 15 min hands (hard - do them anyway)\n- Fri: 15 min something from imagination\n- Sat: 30 min finish a piece\n- Sun: rest or doodle freely\n\nIn 3 months, you won't recognize your own work.",
+    "order": 10,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:22.526Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 141,
+  "fields": {
+    "skill": 15,
+    "title": "Why CapCut (and not Premiere)",
+    "content": "CapCut is FREE, fast, and mobile-first.\n\nWhy it's perfect for beginners:\n- Works on phone and desktop\n- Templates for instant results\n- Auto-captions, auto-beats\n- Exports in 4K\n- No watermarks on mobile (currently)\n\nProfessionals use Premiere. Creators use CapCut.\nStart here. Level up later if needed.",
+    "order": 1,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:22.828Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 142,
+  "fields": {
+    "skill": 15,
+    "title": "Your first 60-second edit",
+    "content": "The simple flow:\n\n1. Open CapCut → New Project\n2. Select video clips from your phone\n3. Tap \"+\" to add them to timeline\n4. Trim: drag edges of each clip to shorten\n5. Add music: Audio → pick track\n6. Add text: Text → type + style\n7. Export\n\nThat's a real video. Post it. You just edited.",
+    "order": 2,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:22.838Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 143,
+  "fields": {
+    "skill": 15,
+    "title": "Trimming like a pro",
+    "content": "Rule: cut every \"um\" and dead second.\n\nThe 3 cuts you'll use most:\n1. Jump cut - remove middle of a talking clip\n2. B-roll cut - cut to showing what you're saying\n3. Beat cut - cut on the beat of the music\n\nThe first 3 seconds decide if someone watches.\nCut to the good part immediately.",
+    "order": 3,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:22.846Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 144,
+  "fields": {
+    "skill": 15,
+    "title": "Adding music that works",
+    "content": "Music = 50% of a video's feel.\n\nSources (free):\n- CapCut's built-in library\n- YouTube Audio Library\n- Pixabay Music\n- Free Music Archive\n\nMatch genre:\n- Action → fast, drums\n- Emotional → soft, piano\n- Funny → quirky, upbeat\n- Tutorial → calm, low-key\n\nAuto-beat feature: CapCut can cut video to the beat - use it!",
+    "order": 4,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:22.855Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 145,
+  "fields": {
+    "skill": 15,
+    "title": "Text and captions",
+    "content": "80% of people watch with sound off. Captions are required.\n\nAuto-captions in CapCut:\n1. Text → Auto Captions → Detect\n2. Fix any wrong words\n3. Style: white text, black outline, bold\n4. Position: center bottom\n\nText styles that work:\n- Karaoke (words pop as spoken)\n- Typewriter (letters appear)\n- Big bold (headers)\n\nKeep font readable. No fancy cursive.",
+    "order": 5,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:22.863Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 146,
+  "fields": {
+    "skill": 15,
+    "title": "Transitions and effects",
+    "content": "Transitions between clips:\n\n- Cut (no transition) - 90% of the time\n- Fade - soft, calm\n- Zoom - energetic\n- Slide - casual\n\nRule: use transitions SPARINGLY. Cutting is fine.\n\nEffects to know:\n- Speed (slow-mo or speed-up)\n- Reverse (play backward)\n- Zoom in/out (build drama)\n\nDon't overdo - effects shouldn't distract.",
+    "order": 6,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:22.870Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 147,
+  "fields": {
+    "skill": 15,
+    "title": "Color and filters",
+    "content": "CapCut has one-tap filters.\n\nCommon looks:\n- Warm (orange tint) - cozy, friendly\n- Cool (blue tint) - cinematic, serious\n- Vintage - nostalgic\n- High contrast - bold, punchy\n\nAdjust manually:\n- Brightness (overall light)\n- Contrast (light vs dark)\n- Saturation (color intensity)\n- Temperature (warm vs cool)\n\nSlight adjustments. Don't over-edit.",
+    "order": 7,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:22.877Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 148,
+  "fields": {
+    "skill": 15,
+    "title": "Creating Reels/TikToks that perform",
+    "content": "Vertical, 9:16, under 60 seconds.\n\nWinning formula:\n- Hook in first 1 second (surprising image or text)\n- Fast pacing (cut every 2-3 seconds)\n- Captions always on\n- Trending audio (check the app)\n- Loop-worthy ending (watch again)\n\nDon't: start slow, no music, no captions, 3-minute videos.",
+    "order": 8,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:22.884Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 149,
+  "fields": {
+    "skill": 15,
+    "title": "Longer videos (YouTube style)",
+    "content": "Structure:\n\n0:00-0:15 - Hook (\"Today I'll show you...\")\n0:15-0:30 - Intro + what they'll get\n0:30-X:XX - Main content (chapters help)\nLast 30 sec - Recap + subscribe CTA\n\nChapters (YouTube):\n1. Description → type 0:00 Intro, 1:30 Chapter 2, etc.\n2. YouTube auto-creates clickable chapters\n\nKeep intro short. Get to value fast.",
+    "order": 9,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:22.891Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 150,
+  "fields": {
+    "skill": 15,
+    "title": "Exporting for each platform",
+    "content": "Settings matter:\n\nYouTube: 1080p or 4K, 16:9 landscape\nTikTok/Reels/Shorts: 1080×1920, 9:16 vertical\nWhatsApp status: 1080×1920, under 30 sec\nInstagram feed: 1080×1350 (4:5)\n\nExport at the HIGHEST quality CapCut allows.\nHigher bitrate = crisper video.\n\nFile size too big? Re-export at 720p - still fine for most.",
+    "order": 10,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:22.897Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 151,
+  "fields": {
+    "skill": 16,
+    "title": "What stress actually is",
+    "content": "Stress is your body's response to a challenge.\n\nShort-term: sharpens focus, gives energy (good!)\nLong-term: damages sleep, immunity, heart, brain\n\nIt's not \"in your head\" - it's real chemistry.\nCortisol and adrenaline do physical damage over months.\n\nThe goal isn't zero stress. It's managing it.",
+    "order": 1,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:23.151Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 152,
+  "fields": {
+    "skill": 16,
+    "title": "The 4-7-8 breathing trick",
+    "content": "The fastest way to calm your nervous system:\n\n1. Breathe in through nose for 4 seconds\n2. Hold for 7 seconds\n3. Breathe out through mouth for 8 seconds\n4. Repeat 4 times\n\nWhy it works: long exhale = parasympathetic activation.\nDo it anywhere - desk, bus, bed.\n\nFeeling panic? This stops it in 2 minutes.",
+    "order": 2,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:23.158Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 153,
+  "fields": {
+    "skill": 16,
+    "title": "The 5-4-3-2-1 grounding technique",
+    "content": "For anxiety and overwhelm:\n\nLook around and name:\n  5 things you can SEE\n  4 things you can TOUCH\n  3 things you can HEAR\n  2 things you can SMELL\n  1 thing you can TASTE\n\nThis drags your brain out of the spiral and into the room.\nWorks in 60 seconds.",
+    "order": 3,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:23.167Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 154,
+  "fields": {
+    "skill": 16,
+    "title": "Sleep - your #1 stress medicine",
+    "content": "Rules for sleep:\n\n- Same bedtime every day (yes, weekends too)\n- No screens 1 hour before bed\n- Cool, dark, quiet room\n- No caffeine after 2pm\n- Bed is for sleep (not for scrolling)\n\nIf you can't sleep after 20 min: get up, do something calm, try again.\n\n7-9 hours. Non-negotiable.",
+    "order": 4,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:23.175Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 155,
+  "fields": {
+    "skill": 16,
+    "title": "Move your body",
+    "content": "Exercise destroys stress hormones.\n\nThe minimum:\n- 20-minute walk daily\n- Or 10 minutes of stretching\n- Or dancing to 3 songs\n\nYou don't need a gym. You need to move.\n\nEven better: sunlight + walking = double benefit.\n\nFeeling overwhelmed? Walk first, think later.",
+    "order": 5,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:23.183Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 156,
+  "fields": {
+    "skill": 16,
+    "title": "Write it out (journaling)",
+    "content": "When your mind spins, put it on paper.\n\nMorning pages (10 minutes):\n- Write 3 pages by hand, whatever comes\n- No editing, no judging\n- Just clear the mental clutter\n\nOr: at night, write 3 things that went well.\nTrains your brain to notice the good.",
+    "order": 6,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:23.191Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 157,
+  "fields": {
+    "skill": 16,
+    "title": "Set boundaries without guilt",
+    "content": "Saying yes to everything = stress factory.\n\nScripts that help:\n- \"I can't take that on right now.\"\n- \"Let me check my schedule and get back to you.\"\n- \"I need to say no this time.\"\n\nNo is a full sentence. You don't owe an explanation.\n\nProtect your time like it's money. Because it is.",
+    "order": 7,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:23.198Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 158,
+  "fields": {
+    "skill": 16,
+    "title": "Talk to someone",
+    "content": "Stress + isolation = worse.\n\nTalk to:\n- A trusted friend\n- Family member\n- Therapist or counselor\n- Support group\n- Even a helpline\n\nYou don't need to be \"in crisis\" to ask for help.\nTalking once a week prevents crisis.\n\nIf in Nigeria: SURPIN (suicide prevention) 08062106493\nOr find a local mental health helpline.",
+    "order": 8,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:23.205Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 159,
+  "fields": {
+    "skill": 16,
+    "title": "Reduce input (social media detox)",
+    "content": "Modern stress often comes from:\n\n- Endless news\n- Doom scrolling\n- Comparing your life to filtered highlights\n\nTry this week:\n- Delete one social app from phone for 7 days\n- Or: only check it 1 hour/day\n- Mute 5 accounts that make you feel bad\n- Follow 5 that teach or uplift\n\nYour brain will thank you.",
+    "order": 9,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:23.212Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 160,
+  "fields": {
+    "skill": 16,
+    "title": "When to get professional help",
+    "content": "Red flags that need a professional:\n\n- Can't sleep for 2+ weeks\n- Can't eat, or eating too much\n- Losing interest in everything\n- Thoughts of self-harm\n- Panic attacks weekly\n- Alcohol/drugs to cope\n- Can't work or function\n\nThis is not weakness. It's like a broken arm - get it treated.\n\nTherapy works. Medication works. Both together work best.\n\nAsking for help is a strength move.",
+    "order": 10,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:23.219Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 161,
+  "fields": {
+    "skill": 17,
+    "title": "Why home workouts work",
+    "content": "Gyms cost money and time. Home workouts:\n\n- 15-30 min per session\n- No equipment (or a mat)\n- No commute\n- No judgement\n- Free forever\n\nConsistency beats intensity. 3 short sessions/week beats 1 gym day.",
+    "order": 1,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:23.671Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 162,
+  "fields": {
+    "skill": 17,
+    "title": "The 5 movement patterns",
+    "content": "Every workout should hit these:\n\n1. Squat (stand up and down)\n2. Hinge (bend at hips, back straight)\n3. Push (pushups, dips)\n4. Pull (rows with a towel or bag)\n5. Carry (walking with weight)\n\nTrain all 5 each week. Ignore the rest for now.",
+    "order": 2,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:23.680Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 163,
+  "fields": {
+    "skill": 17,
+    "title": "The perfect warm-up (5 min)",
+    "content": "Never skip it. Prevents injury.\n\n1. March in place - 1 min\n2. Arm circles - 30 sec each direction\n3. Hip circles - 30 sec each direction\n4. Bodyweight squats - 10 reps\n5. Inchworms - 5 reps\n6. Jumping jacks - 30 sec\n\nDone. Now you're ready.",
+    "order": 3,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:23.689Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 164,
+  "fields": {
+    "skill": 17,
+    "title": "Pushups - from zero to 20",
+    "content": "Can't do one? Start here:\n\nWeek 1: Wall pushups - 3 sets of 10\nWeek 2: Incline pushups (hands on chair) - 3×10\nWeek 3: Knee pushups - 3×5\nWeek 4: Regular pushups - 3×3\nWeek 5+: Add reps every week\n\nForm: hands under shoulders, body straight, core tight.\nChest to floor (or almost).",
+    "order": 4,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:23.697Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 165,
+  "fields": {
+    "skill": 17,
+    "title": "Squats - the king of exercises",
+    "content": "Works your whole lower body.\n\nProper form:\n- Feet shoulder-width apart\n- Toes slightly out\n- Sit back like there's a chair behind you\n- Knees track over toes (not collapsing in)\n- Chest up, back straight\n- Go as low as comfortable (aim for thighs parallel)\n\nBeginner: 3 sets × 10 reps\nRest 60 sec between sets.\n\nProgress: add 2 reps/week, or slow down (3-second down).",
+    "order": 5,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:23.705Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 166,
+  "fields": {
+    "skill": 17,
+    "title": "Core - the plank",
+    "content": "Forget crunches. Planks are better.\n\nBasics:\n- Elbows under shoulders\n- Body straight from head to heels\n- Squeeze abs, glutes, thighs\n- Breathe normally\n\nHold 20 seconds. Rest 20. Repeat 3 times.\n\nWeekly: add 5 seconds.\n\nVariations once 60 sec is easy:\n- Side plank\n- Plank with shoulder taps\n- Plank with leg lifts",
+    "order": 6,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:23.712Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 167,
+  "fields": {
+    "skill": 17,
+    "title": "The 15-minute full-body routine",
+    "content": "Do this 3x per week:\n\n1. Jumping jacks - 45 sec\n2. Squats - 15 reps\n3. Pushups - 10 reps\n4. Lunges - 10 each leg\n5. Plank - 30 sec\n6. Glute bridges - 15 reps\n7. Bicycle crunches - 20 reps\n\nRest 30 sec between exercises.\nRepeat the whole circuit twice.\n\nTotal time: ~15 min. Total burn: real.",
+    "order": 7,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:23.718Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 168,
+  "fields": {
+    "skill": 17,
+    "title": "Stretching and mobility",
+    "content": "After every workout, 5 minutes:\n\n- Neck rolls - 30 sec\n- Shoulder rolls - 30 sec\n- Standing forward fold - 1 min\n- Cat-cow - 1 min\n- Hip flexor stretch - 30 sec each side\n- Hamstring stretch - 30 sec each side\n\nWhy: reduces soreness, prevents injury, keeps you moving.\n\nNever stretch cold muscles. Warm up first.",
+    "order": 8,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:23.725Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 169,
+  "fields": {
+    "skill": 17,
+    "title": "Tracking progress",
+    "content": "What to track:\n- Reps per exercise (should go up)\n- Seconds held (planks)\n- How you feel (energy, sleep)\n- Photos every 4 weeks (subtle changes)\n\nWhat NOT to track daily: weight (fluctuates too much).\nWeigh weekly, same time, same conditions.\n\nProgress isn't linear. Trust the trend.",
+    "order": 9,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:23.733Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 170,
+  "fields": {
+    "skill": 17,
+    "title": "When to rest (and why)",
+    "content": "Rest days are when your muscles actually grow.\n\nSigns you need rest:\n- Persistent soreness over 3 days\n- Can't do a workout you did last week\n- Bad sleep, no appetite\n- Nagging joint pain\n\nRest = 1-2 full days/week minimum.\nWalk, stretch, hydrate, sleep.\n\nMore is not better. Recovery is the workout.",
+    "order": 10,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:23.741Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 171,
+  "fields": {
+    "skill": 18,
+    "title": "What community organizing is",
+    "content": "It's helping a group of people solve a shared problem - together.\n\nNot: doing everything yourself\nNot: telling people what to do\nNot: politics (though it overlaps)\n\nIt's: bringing people together, building power, and winning change.\n\nYou don't need permission. You need a problem and a few neighbors.",
+    "order": 1,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:24.292Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 172,
+  "fields": {
+    "skill": 18,
+    "title": "Start with one issue",
+    "content": "Don't try to fix everything. Pick ONE thing.\n\nExamples:\n- The streetlight on our road has been broken for 6 months\n- Our school has no clean water\n- Women in our area have no safe transport at night\n- Our market has no waste collection\n\nSpecific. Local. Solvable.\n\nOne win → momentum → next bigger win.",
+    "order": 2,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:24.300Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 173,
+  "fields": {
+    "skill": 18,
+    "title": "Find your first 3 people",
+    "content": "You don't need a crowd. You need 3 committed people.\n\nLook for:\n- The person who already complains about this issue\n- Someone with a different skill than you\n- Someone with more connections than you\n\nInvite them for tea. Explain the problem. Ask: \"Will you help?\"\n\n3 is the magic number. From there, growth is easy.",
+    "order": 3,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:24.308Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 174,
+  "fields": {
+    "skill": 18,
+    "title": "Hold your first meeting",
+    "content": "Keep it simple and short (60 min):\n\n1. Welcome + why we're here (5 min)\n2. Everyone introduces themselves (10 min)\n3. Define the problem clearly (15 min)\n4. Brainstorm solutions (20 min)\n5. Pick ONE action + who owns it (10 min)\n\nRules:\n- Everyone speaks\n- No blaming\n- End with a specific next step and date\n\nSnacks help. Seriously.",
+    "order": 4,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:24.316Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 175,
+  "fields": {
+    "skill": 18,
+    "title": "Map your power",
+    "content": "Before you act, understand:\n\n- Who has the power to fix this? (government, company, landlord)\n- What do they care about? (votes, money, reputation)\n- Who influences them? (media, donors, community leaders)\n- What do you have? (numbers, votes, media attention, money)\n\nYou win by understanding who decides and what moves them.",
+    "order": 5,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:24.323Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 176,
+  "fields": {
+    "skill": 18,
+    "title": "Different tactics",
+    "content": "Pick based on your situation:\n\n- Petition (public pressure, easy to start)\n- Meeting with decision-maker (formal, direct)\n- Public demonstration (media attention)\n- Social media campaign (youth-friendly, viral)\n- Boycott (economic pressure)\n- Legal action (slow but powerful)\n- Direct action (sits, marches - high risk, high reward)\n\nMost campaigns use 3+ tactics. Combine them.",
+    "order": 6,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:24.330Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 177,
+  "fields": {
+    "skill": 18,
+    "title": "Using social media for change",
+    "content": "Build a simple online presence:\n\n- WhatsApp group (for your core team)\n- Facebook page (for public visibility)\n- Twitter/X (for press + officials)\n- Instagram (for youth + visuals)\n- TikTok (for short videos of actions)\n\nPost: photos, videos, clear asks, updates.\nHashtag: #OurStreetOurLight #FixOurRoad + your community.\n\nTag officials publicly. Silence is compliance.",
+    "order": 7,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:24.336Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 178,
+  "fields": {
+    "skill": 18,
+    "title": "Handling opposition and burnout",
+    "content": "Two things will happen. Plan for both.\n\nOpposition:\n- Some will call you troublemakers (ignore or invite them to see the problem)\n- Officials will delay (document everything)\n- People will quit (fine - the work continues)\n\nBurnout:\n- Rotate roles so no one does everything\n- Celebrate small wins\n- Take breaks - this is a marathon, not a sprint\n- Bring new people in regularly\n\nThe goal is a movement, not a hero.",
+    "order": 8,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:24.344Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 179,
+  "fields": {
+    "skill": 18,
+    "title": "Measuring success",
+    "content": "Wins aren't always total.\n\nSuccess levels:\n- Full win: the problem is solved\n- Partial win: part of the problem solved\n- Procedural win: officials agree to talk\n- Awareness win: more people know\n- Capacity win: your group got stronger\n\nCount them all. Momentum builds on small wins.",
+    "order": 9,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:24.351Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.lesson",
+  "pk": 180,
+  "fields": {
+    "skill": 18,
+    "title": "Sustaining the movement",
+    "content": "After your first win - what next?\n\n1. Celebrate publicly (thank everyone)\n2. Document what worked (for next time)\n3. Keep the group alive (monthly meetups)\n4. Pick the next issue (bigger now)\n5. Train new leaders (so it's not all on you)\n\nCommunities change when ordinary people organize.\nYou just became one of them.\n\nStepUp exists so you can teach others to do the same.",
+    "order": 10,
+    "estimated_minutes": 5,
+    "created_at": "2026-09-30T16:53:24.358Z",
+    "updated_at": "2026-09-30T18:17:26.843Z",
+    "author": null,
+    "is_official": true,
+    "status": "official",
+    "review_reason": "",
+    "quality_score": 50,
+    "report_count": 0,
+    "helpful_votes": 0
+  }
+},
+{
+  "model": "skills.learninglink",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "skill": 1,
+    "learned_from": null,
+    "learned_at": "2026-09-30T16:27:36.595Z",
+    "is_active": true,
+    "is_self_taught": true,
+    "micro_proof": ""
+  }
+}
+]
