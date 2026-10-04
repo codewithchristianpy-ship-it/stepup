@@ -8,6 +8,12 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='127.0.0.1,localhost').split(',')
+
+# --- CSRF Trusted Origins (for admin actions behind Render proxy) ---
+CSRF_TRUSTED_ORIGINS = [
+    'https://stepup-z3jr.onrender.com',
+    'https://*.onrender.com',
+]
 # Render health check needs this
 if '.onrender.com' not in ALLOWED_HOSTS:
     ALLOWED_HOSTS.append('.onrender.com')
@@ -124,10 +130,7 @@ if not DEBUG:
     CSRF_COOKIE_SECURE = True
     SECURE_HSTS_SECONDS = 0  # Start at 0; raise later after verifying HTTPS
 
-    # CSRF trusted origins for Render
-    CSRF_TRUSTED_ORIGINS = [
-        'https://*.onrender.com',
-    ]
+  
 
     # Static files with WhiteNoise
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
