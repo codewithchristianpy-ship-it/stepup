@@ -178,3 +178,93 @@ class LessonReport(models.Model):
 
     def __str__(self):
         return f"Report on {self.lesson.title} by {self.reporter.username}"
+
+
+
+
+class Session(models.Model):
+    """A live 15-minute session. When learner is null, it's an open slot."""
+    STATUS_CHOICES = [
+        ('scheduled', 'Open Slot'),        # teacher made it, learner hasn't booked
+        ('confirmed', 'Confirmed'),        # learner booked it, upcoming
+        ('completed', 'Completed'),        # session happened
+        ('cancelled', 'Cancelled'),        # someone cancelled
+        ('no_show', 'No Show'),           # learner didn't show up
+    ]
+
+    teacher = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name='sessions_taught',
+    )
+    learner = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.SET_NULL,
+        null=True, blank=True,
+        related_name='sessions_learned',
+        help_text="Null = open slot; set = booked session.",
+    )
+    skill = models.ForeignKey(
+        Skill, on_delete=models.CASCADE, related_name='sessions'
+    )
+
+    scheduled_at = models.DateTimeField(help_text="When the session starts (UTC).")
+    duration_minutes = models.PositiveIntegerField(default=15)
+
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='scheduled')
+    jitsi_room = models.CharField(max_length=120, unique=True)
+
+    # Credit handling
+    credits_paid = models.BooleanField(
+        default=False,
+        help_text="True once learner's credit has been transferred to teacher.",
+    )
+    credits_refunded = models.BooleanField(default=False)
+
+    # Feedback
+    learner_rating = models.PositiveSmallIntegerField(null=True, blank=True)
+    learner_feedback = models.TextField(blank=True)
+    teacher_rating = models.PositiveSmallIntegerField(null=True, blank=True)
+    teacher_feedback = models.TextField(blank=True)
+
+    notes = models.TextField(blank=True, help_text="Optional session notes.")
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    completed_at = models.DateTimeField(null=True, blank=True)
+
+    class Meta:
+        ordering = ['scheduled_at']
+
+    def __str__(self):
+        learner = self.learner.username if self.learner else "open"
+        return f"{self.teacher.username} → {learner} @ {self.scheduled_at:%Y-%m-%d %H:%M}"
+
+    @property
+    def is_open(self):
+        """True if this slot is still bookable."""
+        return self.learner is None and self.status == 'scheduled'
+
+    @property
+    def is_upcoming(self):
+        from django.utils import timezone
+        return (
+            self.status == 'confirmed'
+            and self.scheduled_at > timezone.now()
+        )
+
+    @property
+    def is_past(self):
+        from django.utils import timezone
+        return self.scheduled_at < timezone.now()
+
+    @property
+    def jitsi_url(self):
+        return f"https://meet.jit.si/{self.jitsi_room}"
+
+    def save(self, *args, **kwargs):
+        # Auto-generate unique Jitsi room
+        if not self.jitsi_room:
+            import secrets
+            self.jitsi_room = f"stepup-{secrets.token_urlsafe(10)}"
+        super().save(*args, **kwargs)

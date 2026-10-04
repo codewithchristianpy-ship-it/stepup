@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Complete session — StepUp{% endblock %}
+
+{% block content %}
+<div class="container py-5" style="max-width: 520px;">
+  <div class="card p-4">
+    <h3>✅ Complete this session?</h3>
+    <p class="text-muted">
+      {{ session.skill.name }} with {{ session.teacher.profile.display_name }} on
+      {{ session.scheduled_at|date:"M d, Y" }}.
+    </p>
+    <form method="post">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-primary">Yes, mark complete</button>
+      <a href="{% url 'skills:session_detail' session.id %}" class="btn btn-outline-secondary">
+        Cancel
+      </a>
+    </form>
+  </div>
+</div>
+{% endblock %}

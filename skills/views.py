@@ -5,8 +5,10 @@ from django.db.models import Q, Count
 from django.utils import timezone
 from datetime import timedelta
 
-from .models import Skill, Lesson, LearningLink, StruggleLog, LessonReport
+from .models import Skill, Lesson, LearningLink, StruggleLog, LessonReport, Session
 from .moderation import check_lesson, quality_score
+from .forms import CreateSlotForm
+
 
 def browse_skills(request):
     """List all skills with filters."""
@@ -26,10 +28,7 @@ def browse_skills(request):
     if difficulty:
         skills = skills.filter(difficulty=difficulty)
 
-    # Annotate with counts for sorting
-    skills = skills.annotate(
-        _learners=Count('links', distinct=True),
-    )
+    skills = skills.annotate(_learners=Count('links', distinct=True))
 
     if sort == 'most_learners':
         skills = skills.order_by('-_learners', 'name')
@@ -37,7 +36,7 @@ def browse_skills(request):
         skills = skills.order_by('name')
     elif sort == 'newest':
         skills = skills.order_by('-created_at')
-    else:  # most_teachers
+    else:
         skills = skills.order_by('-_learners', 'name')
 
     context = {
@@ -56,7 +55,6 @@ def skill_detail(request, slug):
     """Show a single skill — official lessons, community lessons, chain, struggles."""
     skill = get_object_or_404(Skill, slug=slug)
 
-    # Split lessons into official and community
     official_lessons = skill.lessons.filter(
         is_official=True, status='official'
     ).order_by('order')
@@ -65,27 +63,31 @@ def skill_detail(request, slug):
         is_official=False, status='published'
     ).select_related('author').order_by('-helpful_votes', '-created_at')
 
-    # Fresh teachers (learned in last 90 days)
     cutoff = timezone.now() - timedelta(days=90)
     fresh_links = skill.links.filter(
         learned_at__gte=cutoff, is_active=True
     ).select_related('user', 'user__profile').order_by('-learned_at')
 
-    # Recent struggle logs
     struggles = StruggleLog.objects.filter(
         link__skill=skill
     ).select_related('link__user').order_by('-created_at')[:10]
 
-    # Does the current user have a link for this skill?
     user_link = None
     if request.user.is_authenticated:
         user_link = LearningLink.objects.filter(user=request.user, skill=skill).first()
 
-    # Eligibility to add a lesson: viewed at least 1 lesson OR has a link
     can_add_lesson = False
     if request.user.is_authenticated:
         has_viewed = request.session.get(f'viewed_lesson_{skill.slug}', False)
         can_add_lesson = has_viewed or (user_link is not None)
+
+    now = timezone.now()
+    open_slots = Session.objects.filter(
+        skill=skill,
+        status='scheduled',
+        learner__isnull=True,
+        scheduled_at__gte=now,
+    ).select_related('teacher', 'teacher__profile').order_by('scheduled_at')[:10]
 
     context = {
         'skill': skill,
@@ -96,6 +98,7 @@ def skill_detail(request, slug):
         'user_link': user_link,
         'has_started_reading': official_lessons.exists(),
         'can_add_lesson': can_add_lesson,
+        'open_slots': open_slots,
     }
     return render(request, 'skills/detail.html', context)
 
@@ -105,12 +108,10 @@ def lesson_detail(request, slug, order):
     skill = get_object_or_404(Skill, slug=slug)
     lesson = get_object_or_404(Lesson, skill=skill, order=order)
 
-    # Only show prev/next within the SAME section (official vs community)
     same_section = skill.lessons.filter(is_official=lesson.is_official, status=lesson.status)
     prev_lesson = same_section.filter(order__lt=order).order_by('-order').first()
     next_lesson = same_section.filter(order__gt=order).order_by('order').first()
 
-    # Inline struggles relevant to this skill
     struggles = StruggleLog.objects.filter(
         link__skill=skill
     ).select_related('link__user').order_by('-created_at')[:3]
@@ -118,7 +119,6 @@ def lesson_detail(request, slug, order):
     total_lessons = same_section.count()
     progress = int((order / total_lessons) * 100) if total_lessons else 0
 
-    # Track that this user opened a lesson of this skill
     if request.user.is_authenticated:
         request.session[f'viewed_lesson_{skill.slug}'] = True
 
@@ -133,6 +133,7 @@ def lesson_detail(request, slug, order):
     }
     return render(request, 'skills/lesson.html', context)
 
+
 @login_required
 def mark_as_learned(request, slug):
     """User clicks 'I just learned this!' → becomes a Link."""
@@ -145,7 +146,6 @@ def mark_as_learned(request, slug):
         messages.info(request, "You've already marked this skill as learned.")
         return redirect('skills:detail', slug=slug)
 
-    # Optional: capture struggle log
     confusion = request.POST.get('biggest_confusion', '').strip()
     breakthrough = request.POST.get('breakthrough_moment', '').strip()
     advice = request.POST.get('advice_to_past_self', '').strip()
@@ -166,7 +166,6 @@ def mark_as_learned(request, slug):
             advice_to_past_self=advice,
         )
 
-    # Update user role if they were just a learner
     profile = request.user.profile
     if profile.role == 'learner':
         profile.role = 'link'
@@ -181,19 +180,10 @@ def mark_as_learned(request, slug):
 
 @login_required
 def add_lesson(request, slug):
-    """
-    Community member submits a lesson.
-    Flow:
-      1. Eligibility: user must have viewed at least 1 lesson of this skill.
-      2. Moderation runs (skill-aware).
-      3. Verdict: reject / review / pass.
-      4. Trust: trusted contributors auto-publish on pass; others go to pending.
-      5. Credit: awarded on publish.
-    """
+    """Community member submits a lesson."""
     skill = get_object_or_404(Skill, slug=slug)
     profile = request.user.profile
 
-    # === ELIGIBILITY CHECK ===
     has_viewed = request.session.get(f'viewed_lesson_{skill.slug}', False)
     has_link = LearningLink.objects.filter(user=request.user, skill=skill).exists()
 
@@ -217,7 +207,6 @@ def add_lesson(request, slug):
         except ValueError:
             minutes = 5
 
-        # === MODERATION ===
         verdict, reason = check_lesson(title, content, skill)
 
         if verdict == 'reject':
@@ -231,21 +220,18 @@ def add_lesson(request, slug):
 
         score = quality_score(title, content, skill)
 
-        # === ORDER: community lessons get order 100+ ===
         existing_community = skill.lessons.filter(is_official=False).count()
         new_order = 100 + existing_community + 1
 
-        # === DECIDE STATUS ===
         if verdict == 'review':
             status = 'pending'
-        else:  # verdict == 'pass'
+        else:
             if profile.can_auto_publish:
                 status = 'published'
             else:
                 status = 'pending'
-                reason = "New contributor — your first lessons need review. Thanks for your patience!"
+                reason = "New contributor — first lessons need review."
 
-        # === CREATE LESSON ===
         lesson = Lesson.objects.create(
             skill=skill,
             title=title,
@@ -259,7 +245,6 @@ def add_lesson(request, slug):
             quality_score=score,
         )
 
-        # === REWARD ===
         if status == 'published':
             wallet = request.user.wallet
             wallet.add_credits(
@@ -285,8 +270,6 @@ def add_lesson(request, slug):
     return render(request, 'skills/add_lesson.html', {'skill': skill})
 
 
-
-
 @login_required
 def my_lessons(request):
     """User sees their own lessons — published, pending, and rejected."""
@@ -303,18 +286,33 @@ def my_lessons(request):
     }
     return render(request, 'skills/my_lessons.html', context)
 
+
+@login_required
+def vote_lesson_helpful(request, slug, order):
+    """User marks a lesson as helpful."""
+    if request.method != 'POST':
+        return redirect('skills:lesson', slug=slug, order=order)
+
+    skill = get_object_or_404(Skill, slug=slug)
+    lesson = get_object_or_404(Lesson, skill=skill, order=order)
+
+    lesson.helpful_votes += 1
+    lesson.save()
+
+    messages.success(request, "Thanks for the feedback!")
+    return redirect('skills:lesson', slug=slug, order=order)
+
+
 @login_required
 def report_lesson(request, slug, order):
     """User reports a community lesson."""
     skill = get_object_or_404(Skill, slug=slug)
     lesson = get_object_or_404(Lesson, skill=skill, order=order, is_official=False)
 
-    # Can't report your own lesson
     if lesson.author == request.user:
         messages.warning(request, "You can't report your own lesson.")
         return redirect('skills:lesson', slug=skill.slug, order=lesson.order)
 
-    # Can't report already-hidden lessons
     if lesson.status == 'hidden':
         messages.info(request, "This lesson is already under review. Thanks!")
         return redirect('skills:lesson', slug=skill.slug, order=lesson.order)
@@ -328,7 +326,6 @@ def report_lesson(request, slug, order):
             messages.error(request, "Please choose a valid reason.")
             return redirect('skills:lesson', slug=skill.slug, order=lesson.order)
 
-        # Create report (unique_together prevents duplicates)
         report, created = LessonReport.objects.get_or_create(
             lesson=lesson,
             reporter=request.user,
@@ -339,35 +336,25 @@ def report_lesson(request, slug, order):
             messages.info(request, "You've already reported this lesson.")
             return redirect('skills:lesson', slug=skill.slug, order=lesson.order)
 
-        # Update report count
         lesson.report_count = lesson.reports.count()
         lesson.save()
 
-        # === AUTO-HIDE THRESHOLD ===
         if lesson.report_count >= 3:
             lesson.status = 'hidden'
             lesson.review_reason = f"Auto-hidden: {lesson.report_count} user reports."
             lesson.save()
 
-            # Reduce author's trust
             if lesson.author:
                 author_profile = lesson.author.profile
                 author_profile.is_flagged = True
                 author_profile.save()
 
-            messages.warning(
-                request,
-                "Thanks for the report. This lesson has been hidden and is now under review."
-            )
+            messages.warning(request, "Thanks for the report. This lesson has been hidden and is now under review.")
         else:
-            messages.success(
-                request,
-                f"Report submitted. {3 - lesson.report_count} more reports will hide this lesson."
-            )
+            messages.success(request, f"Report submitted. {3 - lesson.report_count} more reports will hide this lesson.")
 
         return redirect('skills:lesson', slug=skill.slug, order=lesson.order)
 
-    # GET → show confirmation page
     return render(request, 'skills/report_lesson.html', {
         'skill': skill,
         'lesson': lesson,
@@ -376,16 +363,241 @@ def report_lesson(request, slug, order):
 
 
 @login_required
-def vote_lesson_helpful(request, slug, order):
-    """User marks a lesson as helpful — boosts its visibility."""
-    if request.method != 'POST':
-        return redirect('skills:lesson', slug=slug, order=order)
+def create_slot(request):
+    """A Link creates an availability slot."""
+    links = LearningLink.objects.filter(user=request.user, is_active=True)
+    if not links.exists():
+        messages.warning(
+            request,
+            "You need to be a Link for at least one skill before offering sessions."
+        )
+        return redirect('skills:browse')
 
-    skill = get_object_or_404(Skill, slug=slug)
-    lesson = get_object_or_404(Lesson, skill=skill, order=order)
+    if request.method == 'POST':
+        form = CreateSlotForm(request.POST, user=request.user)
+        form.user = request.user
+        if form.is_valid():
+            session = form.save(commit=False)
+            session.teacher = request.user
+            session.status = 'scheduled'
+            session.save()
+            messages.success(
+                request,
+                f"🎉 Slot created for {session.skill.name} on "
+                f"{session.scheduled_at.strftime('%b %d at %H:%M')}!"
+            )
+            return redirect('skills:my_sessions')
+        else:
+            messages.error(request, "Please fix the errors below.")
+    else:
+        form = CreateSlotForm(user=request.user)
+        form.user = request.user
 
-    lesson.helpful_votes += 1
-    lesson.save()
+    return render(request, 'skills/create_slot.html', {'form': form})
 
-    messages.success(request, "Thanks for the feedback!")
-    return redirect('skills:lesson', slug=slug, order=order)
+
+@login_required
+def my_sessions(request):
+    """Teacher sees sessions + upcoming bookings as learner."""
+    now = timezone.now()
+
+    teaching_open = Session.objects.filter(
+        teacher=request.user, status='scheduled', learner__isnull=True
+    ).select_related('skill').order_by('scheduled_at')
+
+    teaching_confirmed = Session.objects.filter(
+        teacher=request.user, status='confirmed', scheduled_at__gte=now
+    ).select_related('skill', 'learner').order_by('scheduled_at')
+
+    teaching_past = Session.objects.filter(
+        teacher=request.user, status__in=['completed', 'cancelled', 'no_show']
+    ).select_related('skill', 'learner').order_by('-scheduled_at')[:10]
+
+    learning_upcoming = Session.objects.filter(
+        learner=request.user, status='confirmed', scheduled_at__gte=now
+    ).select_related('skill', 'teacher').order_by('scheduled_at')
+
+    learning_past = Session.objects.filter(
+        learner=request.user, status='completed'
+    ).select_related('skill', 'teacher').order_by('-scheduled_at')[:10]
+
+    context = {
+        'teaching_open': teaching_open,
+        'teaching_confirmed': teaching_confirmed,
+        'teaching_past': teaching_past,
+        'learning_upcoming': learning_upcoming,
+        'learning_past': learning_past,
+    }
+    return render(request, 'skills/my_sessions.html', context)
+
+
+@login_required
+def book_slot(request, session_id):
+    """A learner books an open slot. Transfers 1 credit to teacher."""
+    session = get_object_or_404(Session, id=session_id)
+
+    if not session.is_open:
+        messages.error(request, "This slot is no longer available.")
+        return redirect('skills:detail', slug=session.skill.slug)
+
+    if session.teacher == request.user:
+        messages.error(request, "You can't book your own slot.")
+        return redirect('skills:detail', slug=session.skill.slug)
+
+    wallet = request.user.wallet
+    if wallet.balance < 1:
+        messages.error(
+            request,
+            "You need at least 1 credit to book a session."
+        )
+        return redirect('skills:detail', slug=session.skill.slug)
+
+    if request.method == 'POST':
+        try:
+            wallet.spend_credits(
+                amount=1,
+                description=f"Booked session with {session.teacher.username} for {session.skill.name}",
+            )
+        except ValueError:
+            messages.error(request, "Not enough credits.")
+            return redirect('skills:detail', slug=session.skill.slug)
+
+        session.learner = request.user
+        session.status = 'confirmed'
+        session.credits_paid = True
+        session.save()
+
+        messages.success(
+            request,
+            f"🎉 Session booked with {session.teacher.profile.display_name}!"
+        )
+        return redirect('skills:session_detail', session_id=session.id)
+
+    return render(request, 'skills/book_slot.html', {'session': session})
+
+
+@login_required
+def session_detail(request, session_id):
+    """Session detail page — Jitsi room link, participant info, actions."""
+    session = get_object_or_404(Session, id=session_id)
+
+    if request.user != session.teacher and request.user != session.learner:
+        messages.error(request, "You don't have access to this session.")
+        return redirect('skills:my_sessions')
+
+    now = timezone.now()
+
+    join_window_start = session.scheduled_at - timedelta(minutes=5)
+    join_window_end = session.scheduled_at + timedelta(minutes=session.duration_minutes + 15)
+    can_join = join_window_start <= now <= join_window_end
+
+    is_teacher = request.user == session.teacher
+    is_learner = request.user == session.learner
+
+    context = {
+        'session': session,
+        'is_teacher': is_teacher,
+        'is_learner': is_learner,
+        'can_join': can_join,
+        'join_window_start': join_window_start,
+        'join_window_end': join_window_end,
+    }
+    return render(request, 'skills/session_detail.html', context)
+
+
+@login_required
+def complete_session(request, session_id):
+    """Mark a confirmed session as completed."""
+    session = get_object_or_404(Session, id=session_id)
+
+    if request.user != session.teacher and request.user != session.learner:
+        return redirect('skills:my_sessions')
+
+    if session.status != 'confirmed':
+        messages.error(request, "This session can't be marked complete.")
+        return redirect('skills:session_detail', session_id=session.id)
+
+    if request.method == 'POST':
+        session.status = 'completed'
+        session.completed_at = timezone.now()
+        session.save()
+
+        messages.success(request, "✅ Session marked complete. Thanks!")
+        return redirect('skills:session_detail', session_id=session.id)
+
+    return render(request, 'skills/complete_session.html', {'session': session})
+
+
+@login_required
+def cancel_session(request, session_id):
+    """Cancel a confirmed session and refund the learner."""
+    session = get_object_or_404(Session, id=session_id)
+
+    if request.user != session.teacher and request.user != session.learner:
+        return redirect('skills:my_sessions')
+
+    if session.status not in ['confirmed', 'scheduled']:
+        messages.error(request, "This session can't be cancelled.")
+        return redirect('skills:session_detail', session_id=session.id)
+
+    if request.method == 'POST':
+        if session.credits_paid and session.learner and not session.credits_refunded:
+            wallet = session.learner.wallet
+            wallet.add_credits(
+                amount=1,
+                description=f"Refund: cancelled session with {session.teacher.username}",
+                transaction_type='received',
+            )
+            session.credits_refunded = True
+
+        session.status = 'cancelled'
+        session.save()
+
+        messages.info(request, "Session cancelled. Learner refunded.")
+        return redirect('skills:my_sessions')
+
+    return render(request, 'skills/cancel_session.html', {'session': session})
+
+
+@login_required
+def submit_feedback(request, session_id):
+    """Learner or teacher leaves feedback after a completed session."""
+    session = get_object_or_404(Session, id=session_id)
+
+    if request.user != session.teacher and request.user != session.learner:
+        return redirect('skills:my_sessions')
+
+    if session.status != 'completed':
+        messages.error(request, "You can only leave feedback after a session is completed.")
+        return redirect('skills:session_detail', session_id=session.id)
+
+    if request.method == 'POST':
+        rating = request.POST.get('rating', '').strip()
+        feedback = request.POST.get('feedback', '').strip()[:1000]
+
+        try:
+            rating = int(rating)
+            if rating < 1 or rating > 5:
+                raise ValueError
+        except (ValueError, TypeError):
+            messages.error(request, "Please pick a rating between 1 and 5.")
+            return redirect('skills:session_detail', session_id=session.id)
+
+        if request.user == session.teacher:
+            if session.teacher_rating:
+                messages.info(request, "You've already left feedback for this session.")
+                return redirect('skills:session_detail', session_id=session.id)
+            session.teacher_rating = rating
+            session.teacher_feedback = feedback
+        else:
+            if session.learner_rating:
+                messages.info(request, "You've already left feedback for this session.")
+                return redirect('skills:session_detail', session_id=session.id)
+            session.learner_rating = rating
+            session.learner_feedback = feedback
+
+        session.save()
+        messages.success(request, "🎉 Thanks for your feedback!")
+        return redirect('skills:session_detail', session_id=session.id)
+
+    return redirect('skills:session_detail', session_id=session.id)

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Cancel session — StepUp{% endblock %}
+
+{% block content %}
+<div class="container py-5" style="max-width: 520px;">
+  <div class="card p-4">
+    <h3>❌ Cancel this session?</h3>
+    <p class="text-muted">
+      {{ session.skill.name }} with {{ session.teacher.profile.display_name }} on
+      {{ session.scheduled_at|date:"M d, Y" }}.
+    </p>
+    {% if session.credits_paid %}
+      <div class="alert alert-info small">
+        The learner's 1 credit will be refunded.
+      </div>
+    {% endif %}
+    <form method="post">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-danger">Yes, cancel</button>
+      <a href="{% url 'skills:session_detail' session.id %}" class="btn btn-outline-secondary">
+        Keep session
+      </a>
+    </form>
+  </div>
+</div>
+{% endblock %}

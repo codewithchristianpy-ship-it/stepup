@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+{% block title %}Session — StepUp{% endblock %}
+
+{% block content %}
+<div class="container py-4" style="max-width: 720px;">
+
+  <a href="{% url 'skills:my_sessions' %}" class="text-decoration-none small text-muted">
+    ← My sessions
+  </a>
+
+  <h1 class="mt-3 mb-4">{{ session.skill.icon }} Session: {{ session.skill.name }}</h1>
+
+  <div class="card p-4 mb-4">
+    <p class="mb-1">
+      <strong>Teacher:</strong> {{ session.teacher.profile.display_name }}
+    </p>
+    {% if session.learner %}
+      <p class="mb-1">
+        <strong>Learner:</strong> {{ session.learner.profile.display_name }}
+      </p>
+    {% else %}
+      <p class="mb-1"><strong>Learner:</strong> <em>Not booked yet</em></p>
+    {% endif %}
+    <p class="mb-1">
+      <strong>When:</strong> {{ session.scheduled_at|date:"M d, Y" }} at {{ session.scheduled_at|time:"H:i" }}
+      ({{ session.duration_minutes }} min)
+    </p>
+    <p class="mb-1">
+      <strong>Status:</strong>
+      {% if session.status == 'confirmed' %}
+        <span class="badge bg-success">Confirmed</span>
+      {% elif session.status == 'completed' %}
+        <span class="badge bg-primary">Completed</span>
+      {% elif session.status == 'cancelled' %}
+        <span class="badge bg-secondary">Cancelled</span>
+      {% else %}
+        <span class="badge bg-warning text-dark">{{ session.get_status_display }}</span>
+      {% endif %}
+    </p>
+    {% if session.notes %}
+      <p class="mb-1"><strong>Notes:</strong> {{ session.notes }}</p>
+    {% endif %}
+  </div>
+
+  {% if session.status == 'confirmed' %}
+    <div class="card p-4 mb-4" style="background:#ecfdf5; border:1px solid #10b981;">
+      <h5>📹 Join the video call</h5>
+      {% if can_join %}
+        <p class="text-muted small">
+          Your Jitsi room is ready. Click below to join.
+        </p>
+        <a href="{{ session.jitsi_url }}" target="_blank" class="btn btn-success">
+          Join session →
+        </a>
+      {% else %}
+        <p class="text-muted small mb-0">
+          You can join from
+          <strong>{{ join_window_start|date:"M d, H:i" }}</strong>
+          until
+          <strong>{{ join_window_end|date:"M d, H:i" }}</strong>.
+        </p>
+      {% endif %}
+    </div>
+
+    <div class="d-flex gap-2">
+      <form method="post" action="{% url 'skills:complete_session' session.id %}" class="d-inline">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary">
+          ✅ Mark complete
+        </button>
+      </form>
+      <a href="{% url 'skills:cancel_session' session.id %}" class="btn btn-outline-danger">
+        Cancel session
+      </a>
+    </div>
+  {% elif session.status == 'completed' %}
+   {% elif session.status == 'completed' %}
+    <div class="card p-4 text-center mb-4">
+      <div style="font-size:3rem;">🎉</div>
+      <h4 class="mt-2">Session complete</h4>
+      <p class="text-muted">Thanks for learning together!</p>
+    </div>
+
+    <!-- Feedback section -->
+    <div class="card p-4">
+      <h5>⭐ Leave feedback</h5>
+
+      {% if is_teacher %}
+        {% if session.teacher_rating %}
+          <div class="alert alert-success mt-3">
+            <strong>Your feedback:</strong> {{ session.teacher_rating }}/5
+            {% if session.teacher_feedback %}<br>{{ session.teacher_feedback }}{% endif %}
+          </div>
+        {% else %}
+          <p class="text-muted small">Rate your learner to help the community.</p>
+          <form method="post" action="{% url 'skills:submit_feedback' session.id %}">
+            {% csrf_token %}
+            <div class="mb-3">
+              <label class="form-label fw-bold">Rating</label>
+              <select name="rating" class="form-select" required>
+                <option value="">Pick a rating...</option>
+                <option value="5">⭐⭐⭐⭐⭐ — Excellent</option>
+                <option value="4">⭐⭐⭐⭐ — Good</option>
+                <option value="3">⭐⭐⭐ — Okay</option>
+                <option value="2">⭐⭐ — Not great</option>
+                <option value="1">⭐ — Poor</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-bold">Comments (optional)</label>
+              <textarea name="feedback" class="form-control" rows="3" maxlength="1000"
+                        placeholder="How was the session? Any tips for next time?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit feedback</button>
+          </form>
+        {% endif %}
+
+      {% elif is_learner %}
+        {% if session.learner_rating %}
+          <div class="alert alert-success mt-3">
+            <strong>Your feedback:</strong> {{ session.learner_rating }}/5
+            {% if session.learner_feedback %}<br>{{ session.learner_feedback }}{% endif %}
+          </div>
+        {% else %}
+          <p class="text-muted small">Rate your teacher to help other learners.</p>
+          <form method="post" action="{% url 'skills:submit_feedback' session.id %}">
+            {% csrf_token %}
+            <div class="mb-3">
+              <label class="form-label fw-bold">Rating</label>
+              <select name="rating" class="form-select" required>
+                <option value="">Pick a rating...</option>
+                <option value="5">⭐⭐⭐⭐⭐ — Excellent</option>
+                <option value="4">⭐⭐⭐⭐ — Good</option>
+                <option value="3">⭐⭐⭐ — Okay</option>
+                <option value="2">⭐⭐ — Not great</option>
+                <option value="1">⭐ — Poor</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-bold">Comments (optional)</label>
+              <textarea name="feedback" class="form-control" rows="3" maxlength="1000"
+                        placeholder="What did you learn? Was the teacher helpful?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit feedback</button>
+          </form>
+        {% endif %}
+      {% endif %}
+    </div>
+  {% elif session.status == 'cancelled' %}
+    <div class="card p-4 text-center">
+      <div style="font-size:3rem;">❌</div>
+      <h4 class="mt-2">Session cancelled</h4>
+      {% if session.credits_refunded %}
+        <p class="text-muted">1 credit was refunded to the learner.</p>
+      {% endif %}
+    </div>
+  {% endif %}
+
+</div>
+{% endblock %}

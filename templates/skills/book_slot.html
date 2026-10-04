@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}Book session — StepUp{% endblock %}
+
+{% block content %}
+<div class="container py-4" style="max-width: 600px;">
+
+  <a href="{% url 'skills:detail' session.skill.slug %}" class="text-decoration-none small text-muted">
+    ← Back to {{ session.skill.name }}
+  </a>
+
+  <h1 class="mt-3 mb-4">📅 Confirm booking</h1>
+
+  <div class="card p-4 mb-4">
+    <h5 class="mb-3">{{ session.skill.icon }} {{ session.skill.name }}</h5>
+    <p class="mb-1">
+      <strong>Teacher:</strong> {{ session.teacher.profile.display_name }}
+    </p>
+    <p class="mb-1">
+      <strong>When:</strong> {{ session.scheduled_at|date:"M d, Y" }} at {{ session.scheduled_at|time:"H:i" }}
+    </p>
+    <p class="mb-1">
+      <strong>Duration:</strong> {{ session.duration_minutes }} minutes
+    </p>
+    {% if session.notes %}
+      <p class="mb-1"><strong>Notes:</strong> {{ session.notes }}</p>
+    {% endif %}
+  </div>
+
+  <div class="card p-4 mb-4" style="background:#fff8e1; border:1px solid #fbbf24;">
+    <h6 class="mb-2">💎 Cost</h6>
+    <p class="mb-1"><strong>1 credit</strong> will be transferred to the teacher.</p>
+    <p class="mb-0 small text-muted">
+      Your balance: <strong>{{ user.wallet.balance }} credits</strong> →
+      after booking: <strong>{{ user.wallet.balance|add:"-1" }} credits</strong>
+    </p>
+  </div>
+
+  <form method="post">
+    {% csrf_token %}
+    <div class="d-flex gap-2">
+      <button type="submit" class="btn btn-success">
+        ✨ Confirm and book
+      </button>
+      <a href="{% url 'skills:detail' session.skill.slug %}" class="btn btn-outline-secondary">
+        Cancel
+      </a>
+    </div>
+  </form>
+
+</div>
+{% endblock %}

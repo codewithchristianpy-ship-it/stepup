@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Skill, Lesson, LearningLink, StruggleLog, LessonReport
+from .models import Skill, Lesson, LearningLink, StruggleLog, LessonReport, Session
 
 
 class LessonInline(admin.TabularInline):
@@ -83,3 +83,47 @@ class LessonReportAdmin(admin.ModelAdmin):
     list_filter = ('reason', 'created_at')
     search_fields = ('lesson__title', 'reporter__username', 'details')
     ordering = ('-created_at',)
+
+
+    
+
+@admin.register(Session)
+class SessionAdmin(admin.ModelAdmin):
+    list_display = (
+        'teacher', 'learner', 'skill', 'scheduled_at',
+        'status', 'credits_paid', 'created_at',
+    )
+    list_filter = ('status', 'credits_paid', 'skill')
+    search_fields = (
+        'teacher__username', 'teacher__email',
+        'learner__username', 'learner__email',
+        'skill__name', 'jitsi_room',
+    )
+    readonly_fields = ('jitsi_room', 'created_at', 'updated_at')
+    date_hierarchy = 'scheduled_at'
+
+    actions = ['mark_completed', 'refund_credits']
+
+    def mark_completed(self, request, queryset):
+        for session in queryset.filter(status='confirmed'):
+            session.status = 'completed'
+            from django.utils import timezone
+            session.completed_at = timezone.now()
+            session.save()
+        self.message_user(request, f"{queryset.count()} sessions marked complete.")
+    mark_completed.short_description = "✅ Mark selected sessions complete"
+
+    def refund_credits(self, request, queryset):
+        for session in queryset.filter(status='confirmed', credits_paid=True):
+            session.status = 'cancelled'
+            session.credits_refunded = True
+            if session.learner:
+                wallet = session.learner.wallet
+                wallet.add_credits(
+                    amount=1,
+                    description=f"Refund for cancelled session with {session.teacher.username}",
+                    transaction_type='received',
+                )
+            session.save()
+        self.message_user(request, f"{queryset.count()} sessions cancelled with refunds.")
+    refund_credits.short_description = "💸 Refund learner credits"
