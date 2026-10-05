@@ -22,7 +22,7 @@
               <div>
                 <strong>{{ s.skill.icon }} {{ s.skill.name }}</strong><br>
                 <small class="text-muted">
-                  with {{ s.teacher.profile.display_name }} •
+                  with {{ s.teacher.username }} •
                   {{ s.scheduled_at|date:"M d, Y H:i" }}
                 </small>
               </div>
@@ -47,7 +47,8 @@
               <div>
                 <strong>{{ s.skill.icon }} {{ s.skill.name }}</strong><br>
                 <small class="text-muted">
-                  {{ s.scheduled_at|date:"M d, Y H:i" }} • {{ s.duration_minutes }} min
+                  with {{ s.learner.username }} •
+                  {{ s.scheduled_at|date:"M d, Y H:i" }}
                 </small>
               </div>
               <span class="badge bg-warning text-dark">Open</span>
@@ -69,7 +70,7 @@
               <div>
                 <strong>{{ s.skill.icon }} {{ s.skill.name }}</strong><br>
                 <small class="text-muted">
-                  with {{ s.learner.profile.display_name }} •
+                  with {{ s.learner.username }} •
                   {{ s.scheduled_at|date:"M d, Y H:i" }}
                 </small>
                 <div>

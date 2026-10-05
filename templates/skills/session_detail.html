@@ -11,12 +11,12 @@
   <h1 class="mt-3 mb-4">{{ session.skill.icon }} Session: {{ session.skill.name }}</h1>
 
   <div class="card p-4 mb-4">
-    <p class="mb-1">
-      <strong>Teacher:</strong> {{ session.teacher.profile.display_name }}
+        <p class="mb-1">
+      <strong>Teacher:</strong> {{ session.teacher.username }}
     </p>
     {% if session.learner %}
       <p class="mb-1">
-        <strong>Learner:</strong> {{ session.learner.profile.display_name }}
+        <strong>Learner:</strong> {{ session.learner.username }}
       </p>
     {% else %}
       <p class="mb-1"><strong>Learner:</strong> <em>Not booked yet</em></p>

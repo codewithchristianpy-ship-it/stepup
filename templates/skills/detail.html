@@ -65,8 +65,11 @@
               </li>
             {% endfor %}
           </ul>
-          {% if user.is_authenticated %}
-            <button class="btn btn-primary mt-2" disabled>📅 Booking coming soon</button>
+                {% if user.is_authenticated %}
+            <p class="text-muted small mt-2 mb-0">
+              Scroll down to book an open slot, or
+              <a href="{% url 'skills:my_sessions' %}">see your sessions →</a>
+            </p>
           {% else %}
             <a href="{% url 'accounts:login' %}" class="btn btn-outline-primary mt-2">Login to book a session</a>
           {% endif %}
