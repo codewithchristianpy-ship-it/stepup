@@ -45,6 +45,11 @@
   {% if session.status == 'confirmed' %}
     <div class="card p-4 mb-4" style="background:#ecfdf5; border:1px solid #10b981;">
       <h5>📹 Join the video call</h5>
+      <div class="alert alert-info py-2 px-3 small mb-3">
+        💡 <strong>Camera and mic are optional.</strong>
+        You can join with your camera off, or use the chat panel
+        if you'd rather type. The goal is learning — not looking perfect.
+      </div>
       {% if can_join %}
         <p class="text-muted small">
           Your Jitsi room is ready. Click below to join.
