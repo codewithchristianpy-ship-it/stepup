@@ -102,6 +102,19 @@
   </div>
 </div>
 
+<script>
+  // Show splash ONLY on first page load of a session
+  // If already shown in this session, hide it immediately (before paint)
+  (function() {
+    if (sessionStorage.getItem('stepupSplashShown')) {
+      var splash = document.getElementById('stepup-splash');
+      if (splash) { splash.remove(); }
+    } else {
+      sessionStorage.setItem('stepupSplashShown', '1');
+    }
+  })();
+</script>
+
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
         <a class="navbar-brand" href="{% url 'core:home' %}">⚡ StepUp</a>
@@ -158,15 +171,15 @@
 {% block extra_js %}{% endblock %}
 
 <script>
-  // Hide splash screen when page finishes loading
+  // Hide splash after page loads — only if it's still there
   window.addEventListener('load', function() {
-    setTimeout(function() {
-      var splash = document.getElementById('stepup-splash');
-      if (splash) {
+    var splash = document.getElementById('stepup-splash');
+    if (splash) {
+      setTimeout(function() {
         splash.classList.add('hidden');
         setTimeout(function() { splash.remove(); }, 700);
-      }
-    }, 900); // holds ~0.9s after page load, then fades
+      }, 900);
+    }
   });
 </script>
 </body>
