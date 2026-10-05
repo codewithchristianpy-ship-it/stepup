@@ -131,7 +131,20 @@
                     <li class="nav-item"><a class="nav-link" href="{% url 'skills:browse' %}">Skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'skills:my_lessons' %}">My Lessons</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'skills:my_sessions' %}">My Sessions</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'accounts:profile' %}">Profile</a></li>
+                                        <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="{% url 'accounts:profile' %}">
+                            {% if user.profile.avatar %}
+                                <img src="{{ user.profile.avatar.url }}" 
+                                     alt="{{ user.username }}"
+                                     style="width:32px;height:32px;border-radius:50%;object-fit:cover;margin-right:8px;border:2px solid #10b981;">
+                            {% else %}
+                                <span style="width:32px;height:32px;border-radius:50%;background:#10b981;color:white;display:inline-flex;align-items:center;justify-content:center;font-weight:600;font-size:14px;margin-right:8px;">
+                                    {{ user.username|first|upper }}
+                                </span>
+                            {% endif %}
+                            {{ user.username }}
+                        </a>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'accounts:logout' %}">Logout</a></li>
                 {% else %}
                     <li class="nav-item"><a class="nav-link" href="{% url 'skills:browse' %}">Skills</a></li>
