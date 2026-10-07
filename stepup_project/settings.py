@@ -166,12 +166,12 @@ LOGGING = {
 
 # --- Supabase Storage (production only) ---
 if not DEBUG:
-    SUPABASE_PROJECT_REF = config('SUPABASE_PROJECT_REF')
+    SUPABASE_PROJECT_REF = config('SUPABASE_PROJECT_REF', default='').strip()
 
-    AWS_ACCESS_KEY_ID = config('SUPABASE_ACCESS_KEY_ID')
-    AWS_SECRET_ACCESS_KEY = config('SUPABASE_SECRET_ACCESS_KEY')
+    AWS_ACCESS_KEY_ID = config('SUPABASE_ACCESS_KEY_ID', default='').strip()
+    AWS_SECRET_ACCESS_KEY = config('SUPABASE_SECRET_ACCESS_KEY', default='').strip()
     AWS_STORAGE_BUCKET_NAME = 'stepup-media'
-    AWS_S3_REGION_NAME = config('SUPABASE_REGION', default='us-east-1')
+    AWS_S3_REGION_NAME = config('SUPABASE_REGION', default='us-east-1').strip()
     AWS_S3_ENDPOINT_URL = f'https://{SUPABASE_PROJECT_REF}.supabase.co/storage/v1/s3'
 
     AWS_S3_FILE_OVERWRITE = False
