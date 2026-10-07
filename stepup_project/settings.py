@@ -134,7 +134,7 @@ if not DEBUG:
   
 
     # Static files with WhiteNoise
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    
 
 
     # --- Logging (so we can see errors in Render logs) ---
