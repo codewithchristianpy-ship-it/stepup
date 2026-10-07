@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     # Third-party
     'crispy_forms',
     'crispy_bootstrap5',
+    'storages', 
     
     # Local
     'accounts',
@@ -162,3 +163,33 @@ LOGGING = {
         },
     },
 }
+
+# --- Supabase Storage (production only) ---
+if not DEBUG:
+    SUPABASE_PROJECT_REF = config('SUPABASE_PROJECT_REF')
+
+    AWS_ACCESS_KEY_ID = config('SUPABASE_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = config('SUPABASE_SECRET_ACCESS_KEY')
+    AWS_STORAGE_BUCKET_NAME = 'stepup-media'
+    AWS_S3_REGION_NAME = config('SUPABASE_REGION', default='us-east-1')
+    AWS_S3_ENDPOINT_URL = f'https://{SUPABASE_PROJECT_REF}.supabase.co/storage/v1/s3'
+
+    AWS_S3_FILE_OVERWRITE = False
+    AWS_DEFAULT_ACL = None
+    AWS_QUERYSTRING_AUTH = False
+
+    AWS_S3_CUSTOM_DOMAIN = (
+        f'{SUPABASE_PROJECT_REF}.supabase.co/storage/v1/object/public/'
+        f'{AWS_STORAGE_BUCKET_NAME}'
+    )
+
+    STORAGES = {
+        "default": {
+            "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
+        },
+        "staticfiles": {
+            "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+        },
+    }
+
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/'
