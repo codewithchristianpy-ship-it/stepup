@@ -172,6 +172,8 @@ if not DEBUG:
     AWS_SECRET_ACCESS_KEY = config('SUPABASE_SECRET_ACCESS_KEY', default='').strip()
     AWS_STORAGE_BUCKET_NAME = 'stepup-media'
     AWS_S3_REGION_NAME = config('SUPABASE_REGION', default='us-east-1').strip()
+    AWS_S3_SIGNATURE_VERSION = 's3v4'              # ← ADD
+    AWS_S3_ADDRESSING_STYLE = 'path'               # ← ADD
     AWS_S3_ENDPOINT_URL = f'https://{SUPABASE_PROJECT_REF}.supabase.co/storage/v1/s3'
 
     AWS_S3_FILE_OVERWRITE = False
